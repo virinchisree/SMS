@@ -1050,8 +1050,11 @@ form{
         cursor: pointer;
 
         .exam-name{
-            margin-left: 10px;
+            margin-left: 10px;  
             align-content: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
     }
 
@@ -1221,6 +1224,9 @@ form{
         .department-name{
             margin-left: 10px;
             align-content: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
     }
 
@@ -1760,6 +1766,9 @@ form{
         .class-name-payment{
             margin-left: 10px;
             align-content: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
     }
 
@@ -1892,6 +1901,9 @@ form{
         .class-name-fee{
             margin-left: 10px;
             align-content: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
     }
 
