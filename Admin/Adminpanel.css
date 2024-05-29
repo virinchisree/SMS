@@ -156,6 +156,376 @@ a.active {
     }
 }
 
+/*This is for Register Approval Page*/
+.admin-register{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.created-register-container{
+    margin-top: 5px;
+
+    .register-tabs-container {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #404969;
+        background-color: #E0FCFF;
+        align-items: center;
+        border-radius: 10px;
+        height: 30px;
+        padding: 1px 2px 1px 2px;
+        margin-bottom: 10px;
+    }
+
+
+    .register-tab {
+        display: inline-flex;
+      background-color: initial;
+      float: left;
+      border: none;
+      height: 25px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      width: 50%;
+      border-radius: 7px;
+      margin-top: 1px;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-bottom: 1px;
+      color: black;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .register-tab:hover {
+        background-color: #BDE4F4;
+    }
+      
+    .register-tab.active{
+          background-color: coral;
+    }
+
+
+    .student-register-tabs{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #404969;
+        background-color: #E0FCFF;
+        align-items: center;
+        border-radius: 10px;
+        height: 30px;
+        padding: 1px 2px 1px 2px;
+        margin-bottom: 3px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .student-register-tab {
+        display: inline-flex;
+      background-color: initial;
+      float: left;
+      border: none;
+      height: 25px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      width: 50%;
+      border-radius: 7px;
+      margin-top: 1px;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-bottom: 1px;
+      color: black;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .student-register-tab:hover {
+        background-color: #BDE4F4;
+    }
+      
+    .student-register-tab.active{
+          background-color: coral;
+    }
+
+    /*This is for the Student Approval Tab*/
+    .student-approval-list{
+        
+        .created-student-approval{
+            margin: 5px 0px 5px 0px;
+            border: 2px solid #404969;
+            background-color: #BDE4F4;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 10px;
+            cursor: pointer;
+    
+    
+            .student-approval-information{
+                margin-left: 10px;
+                align-content: center;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                h2, h5{
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    align-content: center;
+                }
+                hr{
+                    height: 30px;
+                    border:1px solid coral;
+                }
+            }
+        }
+    }
+
+    .student-approval-functions{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .student-approve{
+            margin-right: 10px;
+            margin-left: 10px;
+            
+            &:hover{
+                margin-bottom: 3px;
+            }
+        }
+
+        .student-decline{
+            margin-right: 15px;
+            margin-left: 5px;
+            
+            &:hover{
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    .student-approved-list{
+        
+        .created-student-approved{
+            margin: 5px 0px 5px 0px;
+            border: 2px solid #404969;
+            background-color: #BDE4F4;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 10px;
+            cursor: pointer;
+    
+    
+            .student-approved-information{
+                margin-left: 10px;
+                align-content: center;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                h2, h5{
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    align-content: center;
+                }
+                hr{
+                    height: 30px;
+                    border:1px solid coral;
+                }
+            }
+
+            .student-approved-functions{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+        
+                .student-approved-edit{
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    
+                    &:hover{
+                        margin-bottom: 3px;
+                    }
+                }
+        
+                .student-approved-delete{
+                    margin-right: 15px;
+                    margin-left: 5px;
+                    z-index: 6;
+                    
+                    &:hover{
+                        margin-bottom: 3px;
+                        z-index: 6;
+                    }
+                }
+            }
+        }
+    }
+
+    /*This is for the Staff Approvals Tab*/
+    .staff-register-tabs{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #404969;
+        background-color: #E0FCFF;
+        align-items: center;
+        border-radius: 10px;
+        height: 30px;
+        padding: 1px 2px 1px 2px;
+        margin-bottom: 3px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .staff-register-tab {
+        display: inline-flex;
+      background-color: initial;
+      float: left;
+      border: none;
+      height: 25px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      width: 50%;
+      border-radius: 7px;
+      margin-top: 1px;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-bottom: 1px;
+      color: black;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .staff-register-tab:hover {
+        background-color: #BDE4F4;
+    }
+      
+    .staff-register-tab.active{
+          background-color: coral;
+    }
+
+    .staff-approval-list{
+        
+        .created-staff-approval{
+            margin: 5px 0px 5px 0px;
+            border: 2px solid #404969;
+            background-color: #BDE4F4;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 10px;
+            cursor: pointer;
+    
+    
+            .staff-approval-information{
+                margin-left: 10px;
+                align-content: center;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                h2, h5{
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    align-content: center;
+                }
+                hr{
+                    height: 30px;
+                    border:1px solid coral;
+                }
+            }
+        }
+    }
+
+    .staff-approval-functions{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .staff-approve{
+            margin-right: 10px;
+            margin-left: 10px;
+            
+            &:hover{
+                margin-bottom: 3px;
+            }
+        }
+
+        .staff-decline{
+            margin-right: 15px;
+            margin-left: 5px;
+            
+            &:hover{
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    .staff-approved-list{
+        
+        .created-staff-approved{
+            margin: 5px 0px 5px 0px;
+            border: 2px solid #404969;
+            background-color: #BDE4F4;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 10px;
+            cursor: pointer;
+    
+    
+            .staff-approved-information{
+                margin-left: 10px;
+                align-content: center;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                h2, h5{
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    align-content: center;
+                }
+                hr{
+                    height: 30px;
+                    border:1px solid coral;
+                }
+            }
+
+            .staff-approved-functions{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+        
+                .staff-approved-edit{
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    
+                    &:hover{
+                        margin-bottom: 3px;
+                    }
+                }
+        
+                .staff-approved-delete{
+                    margin-right: 15px;
+                    margin-left: 5px;
+                    z-index: 6;
+                    
+                    &:hover{
+                        margin-bottom: 3px;
+                        z-index: 6;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*This is fo the classes page*/
 
 .admin-class{
@@ -347,6 +717,7 @@ form{
         .class-edit{
             margin-left: 10px;
             margin-right: 5px;
+            z-index: 6;
 
             &:hover{
                 margin-bottom: 3px;
@@ -356,9 +727,10 @@ form{
         .class-delete{
             margin-right: 10px;
             margin-left: 5px;
-            
+            z-index: 6;
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
@@ -446,9 +818,11 @@ form{
         .section-delete{
             margin-right: 10px;
             margin-left: 5px;
+            z-index: 6;
             
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
@@ -509,13 +883,36 @@ form{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 50px;
+        height: 80px;
         border-radius: 10px;
         cursor: pointer;
 
-        .subject-name{
+
+        .subject-name-container{
             margin-left: 10px;
             align-content: center;
+            display: flex;
+            flex-direction: column;
+
+            .class-name{
+                height: 35px;
+            }
+
+            .subject-name{
+                display: flex;
+                flex-direction: row;
+                align-items:center;
+
+                h2, h5{
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    align-content: center;
+                }
+                hr{
+                    height: 15px;
+                    border:1px solid coral;
+                }
+            }
         }
     }
 
@@ -523,6 +920,11 @@ form{
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        a{
+            text-decoration: none;
+            background-color: inherit;
+        }
 
         .subject-edit{
             margin-right: 5px;
@@ -536,10 +938,48 @@ form{
         .subject-delete{
             margin-right: 10px;
             margin-left: 5px;
-            
+            z-index: 6;
+
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
+        }
+    }
+}
+
+#subject-form{
+    .table-container{
+        width: 100%;
+        text-align: center;
+    
+        table 
+        {
+            margin-top: 10px;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+    
+        thead{
+            th{
+                background-color: coral;
+            }
+        }
+          
+        th,td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+    
+            .delete-button{
+                width: 100%;
+            }
+        }
+          
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
         }
     }
 }
@@ -626,9 +1066,11 @@ form{
         .exam-delete{
             margin-right: 10px;
             margin-left: 5px;
-            
+            z-index: 6;
+
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
@@ -793,9 +1235,11 @@ form{
         .department-delete{
             margin-right: 10px;
             margin-left: 5px;
+            z-index: 6;
             
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
@@ -984,9 +1428,11 @@ form{
         .academic-delete{
             margin-right: 10px;
             margin-left: 5px;
+            z-index: 6;
             
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
@@ -1098,9 +1544,11 @@ form{
         .employee-delete{
             margin-right: 10px;
             margin-left: 5px;
-            
+            z-index: 6;
+
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
@@ -1646,9 +2094,11 @@ form{
         .manageBus-delete{
             margin-right: 10px;
             margin-left: 5px;
+            z-index: 6;
             
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
@@ -1837,9 +2287,11 @@ form{
         .attendance-delete{
             margin-right: 10px;
             margin-left: 5px;
-            
+            z-index: 6;
+
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
@@ -2045,9 +2497,11 @@ form{
         .student-timetable-delete, .staff-timetable-delete{
             margin-right: 10px;
             margin-left: 5px;
+            z-index: 6;
             
             &:hover{
                 margin-bottom: 3px;
+                z-index: 6;
             }
         }
     }
