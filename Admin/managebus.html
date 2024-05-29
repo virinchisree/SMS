@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Admin Panel</title>
+        <link rel="stylesheet" href="Adminpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="admin-info">
+                    <div class="admin-name">
+                        <h1>Admin Name</h1>
+                    </div>
+                    <div class="admin-email">
+                        <h2>Admin Email</h2>
+                    </div>
+                    <div class="admin-ID">
+                        <h2>Admin ID</h2>
+                    </div>
+                    <div class="admin-phone">
+                        <h3>Admin Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav id="nav">
+                        <a href="classes.html">Classes</a>
+                        <a href="section.html">Sections</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="exams.html">Exams</a>
+                        <a href="departments.html">Departments</a>
+                        <a href="academicsession.html">Academic Session</a>
+                        <a href="employeecategories.html">Employee Categories</a>
+                        <a href="leaves.html">Leave Types</a>
+                        <a href="studentpayment.html">Student Payment Types</a>
+                        <a href="feecollection.html">Fee Collection</a>
+                        <a href="">Sms Integration</a>
+                        <a href="managebus.html" class="active" id="academic-link">Manages Buses</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="timetable.html">Time Table Module</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Admin Portal - Manage Bus</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="admin-manageBus">
+                        <div class="manageBus-button">
+                            <div class="add-button">
+                                <button type="button" onclick="document.getElementById('id01').style.display = 'block'">
+                                  <span aria-hidden="true" id="add-manageBus-symbol"><strong>+</strong></span>
+                                  <span class="sr-only"><strong>Add</strong></span>
+                                </button>
+                            </div>                        
+                        </div>
+                        <div class="created-manageBus-container" id="manageBus-list">
+                            <div class="manageBus-collapsible-content">
+                                <!--This is the Tab that will hide the content toggling this tab will show the content-->
+                                <div class="created-manageBus" id="collapsible">
+                                    <div class="manageBus-name">
+                                        <h2>Route Name</h2><hr><h5>Driver Name</h5><hr><h5>Driver Phone</h5>
+                                    </div>
+                                    <div class="manageBus-functions">
+                                        <div class="manageBus-edit" id="class-edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                            <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                        </svg>
+                                        </div>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg"  class="manageBus-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="3 6 5 6 21 6"></polyline>
+                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!---->
+                                <div class="manageBus-content">
+                                    <div class="manageBus-tabs-container">
+                                        <button type="button" class="manageBus-tabs" onclick="show(event, 'pick-up')" id="defaultTab">Pick Up</button>
+                                        <button type="button" class="manageBus-tabs" onclick="show(event, 'drop-off')">Drop Off</button>
+                                    </div>
+                                    <div id="pick-up" class="manageBus-timing">
+                                        <h1>Pick-Up</h1>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Location Name</th>
+                                                    <th>Pick Up Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Location - 1</td>
+                                                    <td>time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location - 2</td>
+                                                    <td>time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location - 3</td>
+                                                    <td>time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location - 4</td>
+                                                    <td>time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location - 5</td>
+                                                    <td>time</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="drop-off" class="manageBus-timing">
+                                        <h1>Drop-Off</h1>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Location Name</th>
+                                                    <th>Drop Off Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Location - 1</td>
+                                                    <td>time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location - 2</td>
+                                                    <td>time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location - 3</td>
+                                                    <td>time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location - 4</td>
+                                                    <td>time</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location - 5</td>
+                                                    <td>time</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This brings up the class adding form-->
+        <div id="id01" class="modal" style="display: none;">
+            <form id="manageBus-form" class="modal-content animate">
+                <span class="close" onclick="closeManageBusForm()">&times;</span>
+                <div class="container">
+                    <label for="route-name"><b>Route Name</b></label>
+                    <input type="text" placeholder="Enter Route Name" name="route-name" id="route-name" required>
+                    <div class="bus-route-details">
+                        <div class="driver-details">
+                            <div class="driver-name">
+                                <label for="driver-name"><b>Driver Name</b></label>
+                                <input type="text" placeholder="Enter Driver Name" name="driver-name" id="driver-name" required>
+                            </div>
+                            <div class="driver-number">
+                                <label for="driver-phone"><b>Driver Phone</b></label>
+                                <input type="tel" placeholder="Enter Driver Phone" name="driver-phone" id="driver-phone" minlength="10" required>
+                            </div>
+                        </div>
+                        <h3><center>This Is For Pick Up</center></h3>
+                        <div class="bus-route-pick-up">
+                            <table id="bus-pickup-table">
+                                <thead>
+                                    <tr>
+                                        <th>Pick-Up Location</th>
+                                        <th>Pick-Up Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" name="pick-up-location" id="pick-up-location"></td>
+                                        <td><input type="time" name="pick-up-time" id="pick-up-time"></td>
+                                        <td><button type="button" class="delete-pick-up-row">Delete</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="button" id="add-pick-up-row">Add Row</button>
+                        </div>
+                        <h3><center>This Is For Drop Off</center></h3>
+                        <div class="bus-route-drop-off">
+                            <table id="bus-dropoff-table">
+                                <thead>
+                                    <tr>
+                                        <th>Drop-Off Location</th>
+                                        <th>Drop-Off Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" name="drop-off-location" id="drop-off-location"></td>
+                                        <td><input type="time" name="drop-off-time" id="drop-off-time"></td>
+                                        <td><button type="button" class="delete-drop-off-row">Delete</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="button" id="add-drop-off-row">Add Row</button>
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <button type="submit">Create Class</button>
+                        <button type="button" onclick="closeManageBusForm()" class="cancelbtn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--This is for resetting the form--> 
+        <script>
+            function closeManageBusForm(){
+                formData = document.getElementById('manageBus-form');
+                formData.reset();
+                document.getElementById('id01').style.display='none';
+
+            }
+        </script>
+        <!--This JavaScript is for scrolling to the active link in the side navigation bar-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const activeLink = document.querySelector("a.active");
+                if (activeLink) {
+                    const linkId = activeLink.id;
+                    const linkElement = document.getElementById(linkId);
+                    linkElement.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        </script>
+        <script>
+        const nav = document.querySelector('nav');
+
+        nav.addEventListener('scroll', () => {
+            nav.classList.add('scrolling');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            nav.classList.remove('scrolling');
+        });
+
+        nav.addEventListener('mouseover', () => {
+            nav.classList.add('scrolling');
+        });
+        </script>
+        <!--This java script is for creating Departments-->
+        <script>
+            function addClassTOList(academicName, academicStart, academicEnd){
+                const academicList = document.getElementById('manageBus-list');
+                const academicItem = document.createElement('div');
+                academicItem.classList.add('created-manageBus');
+                academicItem.id = `class-${academicName}`;
+
+                academicItem.innerHTML = `
+                <div class="manageBus-name">
+                    <h2>Academic Session ${academicName}</h2><hr><h5>${academicStart} - ${academicEnd}</h5>
+                </div>
+                <div class="manageBus-functions">
+                    <div class="manageBus-edit" id="class-edit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                            <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg"  class="manageBus-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </div>
+                </div>`;
+
+                academicList.appendChild(academicItem);
+            }
+
+            /*This is for handling the class creation form*/
+            const academicForm = document.getElementById('manageBus-form');
+            academicForm.addEventListener('submit', (event)=>{
+                event.preventDefault();
+
+                const academicInput = document.getElementById('academic-name');
+                const academicName = academicInput.value.trim();
+                const academicStartInput = document.getElementById('academic-start');
+                const academicStart = academicStartInput.value.trim();
+                const academicEndInput = document.getElementById('academic-end');
+                const academicEnd = academicEndInput.value.trim();
+
+                if(academicName, academicStart, academicEnd){
+                    addClassTOList(academicName, academicStart, academicEnd);
+                    academicInput.value = '';
+                    academicStartInput.value = '';
+                    academicEndInput.value = '';
+                    document.getElementById('id01').style.display='none';
+                }
+            });
+
+            // Add an event listener to the section list
+            document.getElementById('manageBus-list').addEventListener('click', (event) => {
+              if (event.target.classList.contains('manageBus-delete')) {
+                const academicItem = event.target.closest('.manageBus-collapsible-content');
+                academicItem.remove();
+              }
+            });
+        </script>
+        <script>
+            /*This is for the Pick Up Table*/
+            function addStudentRow() {
+                const tbody = document.querySelector('#bus-pickup-table tbody')
+                const rowCount = tbody.rows.length; // exclude header row
+                const row = tbody.insertRow(rowCount);
+            
+                row.insertCell(0).innerHTML = `<input type="text" name="pick-up-time" id="pick-up-time">`;
+                row.insertCell(1).innerHTML = `<input type="time" name="pick-up-time" id="pick-up-time">`;
+                row.insertCell(2).innerHTML = `<button type="button" class="delete-pick-up-row">Delete</button>`;
+            }
+    
+            document.getElementById('add-pick-up-row').addEventListener('click', addStudentRow);
+
+            // Add an event listener to the table body
+            document.querySelector('#bus-pickup-table tbody').addEventListener('click', (event) => {
+              if (event.target.classList.contains('delete-pick-up-row')) {
+                const row = event.target.closest('tr');
+                row.remove();
+              }
+            });
+
+            /*This is for the Drop Off Table*/
+            function addRow() {
+                const tbody = document.querySelector('#bus-dropoff-table tbody')
+                const rowCount = tbody.rows.length; // exclude header row
+                const row = tbody.insertRow(rowCount);
+            
+                row.insertCell(0).innerHTML = `<input type="text" name="drop-off-time" id="drop-off-time">`;
+                row.insertCell(1).innerHTML = `<input type="time" name="drop-off-time" id="drop-off-time">`;
+                row.insertCell(2).innerHTML = `<button type="button" class="delete-drop-off-row">Delete</button>`;
+            }
+    
+            document.getElementById('add-drop-off-row').addEventListener('click', addRow);
+
+            // Add an event listener to the table body
+            document.querySelector('#bus-dropoff-table tbody').addEventListener('click', (event) => {
+              if (event.target.classList.contains('delete-drop-off-row')) {
+                const row = event.target.closest('tr');
+                row.remove();
+              }
+            });
+        </script>
+        <!--This is for the collapsible content-->
+        <script>
+            var coll = document.querySelectorAll("#collapsible");
+            var i;
+                    
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function(event) {
+                event.target.classList.toggle("active"); // Change this line
+                var content = event.target.nextElementSibling; // Change this line
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
+        <!--This Java Script is for switching between the Tabs-->
+        <script>
+            function show(event, busTime) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("manageBus-timing");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("manageBus-tabs");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(busTime).style.display = "block";
+              event.target.className += " active";
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultTab").click();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Parent Panel</title>
+        <link rel="stylesheet" href="Parentpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="student-info">
+                    <div class="parent-name">
+                        <h1>Parent name</h1>
+                    </div>
+                    <div class="student-name">
+                        <h2>Student name</h2>
+                    </div>
+                    <div class="student-ID">
+                        <h2>Student ID</h2>
+                    </div>
+                    <div class="student-class">
+                        <h3>Student class</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="classes.html">Classes</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="timetable.html">Time Table</a>
+                        <a href="exams.html">Exams</a>
+                        <a href="marks.html">Marks</a>
+                        <a href="attendance.html" class="active" id="attendance-link">Attendance</a>
+                        <a href="fees.html">Fees</a>
+                        <a href="businfo.html">Bus Info</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Student Portal - Attendance</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="attendance-table">
+                        <table>
+                            <tr>
+                              <th>Month</th>
+                              <th>Total Days</th>
+                              <th>Days Absent</th>
+                              <th>Attendance (%)</th>
+                            </tr>
+                            <tr>
+                              <td>June</td>
+                              <td>22</td>
+                              <td>2</td>
+                              <td>{{ (22-2)/22 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>July</td>
+                              <td>24</td>
+                              <td>1</td>
+                              <td>{{ (24-1)/24 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>August</td>
+                              <td>20</td>
+                              <td>3</td>
+                              <td>{{ (20-3)/20 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>September</td>
+                              <td>23</td>
+                              <td>2</td>
+                              <td>{{ (23-2)/23 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>October</td>
+                              <td>22</td>
+                              <td>1</td>
+                              <td>{{ (22-1)/22 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>November</td>
+                              <td>20</td>
+                              <td>2</td>
+                              <td>{{ (20-2)/20 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>December</td>
+                              <td>23</td>
+                              <td>3</td>
+                              <td>{{ (23-3)/23 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>January</td>
+                              <td>20</td>
+                              <td>1</td>
+                              <td>{{ (20-1)/20 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>February</td>
+                              <td>22</td>
+                              <td>2</td>
+                              <td>{{ (22-2)/22 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>March</td>
+                              <td>23</td>
+                              <td>1</td>
+                              <td>{{ (23-1)/23 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>April</td>
+                              <td>20</td>
+                              <td>0</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>May</td>
+                              <td>22</td>
+                              <td>22</td>
+                              <td></td>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This is for scrolling in the nav-->
+        <script>
+          const nav = document.querySelector('nav');
+  
+          nav.addEventListener('scroll', () => {
+              nav.classList.add('scrolling');
+          });
+  
+          nav.addEventListener('mouseleave', () => {
+              nav.classList.remove('scrolling');
+          });
+  
+          nav.addEventListener('mouseover', () => {
+              nav.classList.add('scrolling');
+          });
+        </script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const activeLink = document.querySelector("a.active");
+          if (activeLink) {
+            const linkId = activeLink.id;
+            const linkElement = document.getElementById(linkId);
+            linkElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+        </script>
+        <!--Java Script code for attendance calculations-->
+        <script>
+            // Get the table rows
+            var rows = document.querySelectorAll('table tr');
+
+            // Loop through each row
+            rows.forEach(function(row, index) {
+              // Skip the header row
+              if (index === 0) return;
+            
+              // Get the cells in the row
+              var cells = row.cells;
+            
+              // Get the total days and days absent values
+              var totalDays = parseInt(cells[1].textContent);
+              var daysAbsent = parseInt(cells[2].textContent);
+            
+              // Calculate the attendance percentage
+              var attendancePercentage = ((totalDays - daysAbsent) / totalDays) * 100;
+            
+              // Format the percentage to 2 decimal places
+              attendancePercentage = attendancePercentage.toFixed(2);
+            
+              // Update the attendance percentage cell
+              cells[3].textContent = attendancePercentage + '%';
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Admin Panel</title>
+        <link rel="stylesheet" href="Adminpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="admin-info">
+                    <div class="admin-name">
+                        <h1>Admin Name</h1>
+                    </div>
+                    <div class="admin-email">
+                        <h2>Admin Email</h2>
+                    </div>
+                    <div class="admin-ID">
+                        <h2>Admin ID</h2>
+                    </div>
+                    <div class="admin-phone">
+                        <h3>Admin Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav id="nav">
+                        <a href="classes.html">Classes</a>
+                        <a href="section.html">Sections</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="exams.html">Exams</a>
+                        <a href="departments.html">Departments</a>
+                        <a href="academicsession.html">Academic Session</a>
+                        <a href="employeecategories.html">Employee Categories</a>
+                        <a href="leaves.html">Leave Types</a>
+                        <a href="studentpayment.html">Student Payment Types</a>
+                        <a href="feecollection.html" class="active" id="leaves-link">Fee Collection</a>
+                        <a href="">Sms Integration</a>
+                        <a href="managebus.html">Manages Buses</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="timetable.html">Time Table Module</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Admin Portal - Fee Collection</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="admin-fee">
+                        <div class="fee-button">
+                            <div class="add-button">
+                                <button type="button" onclick="document.getElementById('id01').style.display = 'block'">
+                                  <span aria-hidden="true" id="add-fee-symbol"><strong>+</strong></span>
+                                  <span class="sr-only"><strong>Add</strong></span>
+                                </button>
+                            </div>                        
+                        </div>
+                        <div class="created-fee-container" id="payment-list">
+                            <div class="fee-collapsible-content">
+                                <!--This is for opening the Collapsible content-->
+                                <div class="created-fee" id="collapsible">
+                                    <div class="class-name-fee">
+                                        <h2>Class Name - Section</h2>
+                                    </div>
+                                </div>
+                                <!--This is for writing collapsible content-->
+                                <div class="class-fee-content">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>S.no</th>
+                                                <th>Student Name</th>
+                                                <th>Tuition Fee<br>(Paid/Unpaid)</th>
+                                                <th>Uniform Fee<br>(Paid/Unpaid)</th>
+                                                <th>Stationary Fee<br>(Paid/Unpaid)</th>
+                                                <th>Bus Fee<br>(Paid/Unpaid)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Student-1</td>
+                                                <th><span>&#8377</span>30,000/<span>&#8377</span>30,000</th>
+                                                <th><span>&#8377</span>8000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>6000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>3000/<span>&#8377</span>0</th>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Student-2</td>
+                                                <th><span>&#8377</span>60,000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>8000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>6000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>3000/<span>&#8377</span>0</th>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Student-3</td>
+                                                <th><span>&#8377</span>50,000/<span>&#8377</span>10,000</th>
+                                                <th><span>&#8377</span>8000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>6000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>3000/<span>&#8377</span>0</th>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Student-4</td>
+                                                <th><span>&#8377</span>25,000/<span>&#8377</span>35,000</th>
+                                                <th><span>&#8377</span>8000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>6000/<span>&#8377</span>0</th>
+                                                <th><span>&#8377</span>3000/<span>&#8377</span>0</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This brings up the class adding form-->
+        <div id="id01" class="modal" style="display: none;">
+            <form id="payment-form" class="modal-content animate">
+                <span class="close" onclick="closePaymentForm()">&times;</span>
+                <div class="container">
+                    <div class="student-details">
+                        <div class="student-name">
+                            <label for="student-name"><b>Student Name</b></label>
+                            <input type="text" placeholder="Enter Student Name" name="student-name" id="student-name" required>
+                        </div>
+                        <div class="student-ID">
+                            <label for="student-ID"><b>Student ID</b></label>
+                            <input type="text" placeholder="Enter Student ID" name="student-ID" id="student-ID" required>
+                        </div>
+                    </div>
+                    <div class="student-class-details">
+                        <div class="student-class">
+                            <label for="student-class">Select Class</label>
+                            <select name="student-class" id=""student-class>
+                                <option value="hidden"></option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        <div class="student-section">
+                            <label for="student-section">Select Section</label>
+                            <select name="student-section" id="student-section">
+                                <option value="hidden"></option>
+                                <option value="A">A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="student-payment-details">
+                        <div class="student-payment-type">
+                            <label for="student-payment-type">Select The Type Of Payment Made</label>
+                            <select name="student-payment-type" id="student-payment-type">
+                                <option value="hidden"></option>
+                                <option value="tuition-fee">Tuition Fee</option>
+                                <option value="stationary-fee">Stationary Fee</option>
+                                <option value="uniform-fee">Uniform Fee</option>
+                                <option value="bus-fee">Bus Fee</option>
+                            </select>
+                        </div>
+                        <div class="student-payment-number">
+                            <label for="student-payment-number">Enter the Receipt Number</label>
+                            <input type="text" placeholder="Enter the Receipt Number" id="student-payment-number" name="student-payment-number" required>
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <button type="submit">Create Class</button>
+                        <button type="button" onclick="closePaymentForm()" class="cancelbtn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--This is for resetting the form-->
+        <script>
+            function closePaymentForm(){
+                formData = document.getElementById('payment-form');
+                formData.reset();
+                document.getElementById('id01').style.display='none';
+
+            }
+        </script>
+        <!--This JavaScript is for scrolling to the active link in the side navigation bar-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const activeLink = document.querySelector("a.active");
+                if (activeLink) {
+                    const linkId = activeLink.id;
+                    const linkElement = document.getElementById(linkId);
+                    linkElement.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        </script>
+        <script>
+        const nav = document.querySelector('nav');
+
+        nav.addEventListener('scroll', () => {
+            nav.classList.add('scrolling');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            nav.classList.remove('scrolling');
+        });
+
+        nav.addEventListener('mouseover', () => {
+            nav.classList.add('scrolling');
+        });
+        </script>
+        <!--This java script is for creating Departments-->
+        <script>
+            function show(event, leaveType) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("leavesContent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("leaves-tab");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(leaveType).style.display = "block";
+              event.currentTarget.className += " active";
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultTab").click();
+        </script>
+        <!--This is for the collapsible content-->
+        <script>
+            var coll = document.querySelectorAll("#collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
+    </body>
+</html>

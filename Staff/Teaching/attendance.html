@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Teacher Panel</title>
+        <link rel="stylesheet" href="Teacherpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="teacher-info">
+                    <div class="teacher-name">
+                        <h1>Teacher Name</h1>
+                    </div>
+                    <div class="teacher-email">
+                        <h2>Teacher Email</h2>
+                    </div>
+                    <div class="teacher-ID">
+                        <h2>Teacher ID</h2>
+                    </div>
+                    <div class="teacher-phone">
+                        <h3>Teacher Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="classes.html">Classes</a>
+                        <a href="timetable.html">Time Table</a>
+                        <a href="marks.html">Marks</a>
+                        <a href="attendance.html" class="active">Attendance</a>
+                        <a href="leaves.html">Leaves</a>
+                        <a href="salary.html">Salary</a>
+                        <a href="businfo.html">Bus Info</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Teacher Portal - Attendance</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="attendance-table">
+                        <button type="button" class="collapsible">My Attendance</button>
+                        <div class="class-content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Total Days</th>
+                                        <th>Days Absent</th>
+                                        <th>Attendance (%)</th>
+                                      </tr>
+                                </thead>
+                                <tr>
+                                  <td>June</td>
+                                  <td>22</td>
+                                  <td>2</td>
+                                  <td>{{ (22-2)/22 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>July</td>
+                                  <td>24</td>
+                                  <td>1</td>
+                                  <td>{{ (24-1)/24 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>August</td>
+                                  <td>20</td>
+                                  <td>3</td>
+                                  <td>{{ (20-3)/20 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>September</td>
+                                  <td>23</td>
+                                  <td>2</td>
+                                  <td>{{ (23-2)/23 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>October</td>
+                                  <td>22</td>
+                                  <td>1</td>
+                                  <td>{{ (22-1)/22 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>November</td>
+                                  <td>20</td>
+                                  <td>2</td>
+                                  <td>{{ (20-2)/20 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>December</td>
+                                  <td>23</td>
+                                  <td>3</td>
+                                  <td>{{ (23-3)/23 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>January</td>
+                                  <td>20</td>
+                                  <td>1</td>
+                                  <td>{{ (20-1)/20 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>February</td>
+                                  <td>22</td>
+                                  <td>2</td>
+                                  <td>{{ (22-2)/22 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>March</td>
+                                  <td>23</td>
+                                  <td>1</td>
+                                  <td>{{ (23-1)/23 * 100 | number:2 }}%</td>
+                                </tr>
+                                <tr>
+                                  <td>April</td>
+                                  <td>20</td>
+                                  <td>0</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>May</td>
+                                  <td>22</td>
+                                  <td>22</td>
+                                  <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button type="button" class="collapsible">Class 1</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 2</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 3</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 4</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 5</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 6</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 7</button>
+                        <div class="class-content">
+                          <table>
+                            <thead>
+                              <tr>
+                                <td>Section</td>
+                                <td>Subjects</td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>7 - A</td>
+                                <td>
+                                  <div class="upload-attendance">
+                                    <div class="upload-attendance-file">
+                                      <div class="upload-file"><p>Upload Attendance</p></div>
+                                      <div class="upload-file"><input type="file" required></div>
+                                    </div>
+                                    <div class="upload-submit"><button type="submit">Submit</button></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>7 - B</td>
+                                <td>
+                                  <div class="upload-attendance">
+                                    <div class="upload-attendance-file">
+                                      <div class="upload-file"><p>Upload Attendance</p></div>
+                                      <div class="upload-file"><input type="file" required></div>
+                                    </div>
+                                    <div class="upload-submit"><button type="submit">Submit</button></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>7 - C</td>
+                                <td>
+                                  <div class="upload-attendance">
+                                    <div class="upload-attendance-file">
+                                      <div class="upload-file"><p>Upload Attendance</p></div>
+                                      <div class="upload-file"><input type="file" required></div>
+                                    </div>
+                                    <div class="upload-submit"><button type="submit">Submit</button></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>7 - D</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <button type="button" class="collapsible">Class 8</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 9</button>
+                        <div class="class-content">
+                          <table>
+                            <thead>
+                              <tr>
+                                <td>Section</td>
+                                <td>Subjects</td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>9 - A</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>9 - B</td>
+                                <td>
+                                  <div class="upload-attendance">
+                                    <div class="upload-attendance-file">
+                                      <div class="upload-file"><p>Upload Attendance</p></div>
+                                      <div class="upload-file"><input type="file" required></div>
+                                    </div>
+                                    <div class="upload-submit"><button type="submit">Submit</button></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>9 - C</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>9 - D</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <button type="button" class="collapsible">Class 10</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 11</button>
+                        <div class="class-content"></div>
+                        <button type="button" class="collapsible">Class 12</button>
+                        <div class="class-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This is for scrolling in the nav-->
+        <script>
+          const nav = document.querySelector('nav');
+  
+          nav.addEventListener('scroll', () => {
+              nav.classList.add('scrolling');
+          });
+  
+          nav.addEventListener('mouseleave', () => {
+              nav.classList.remove('scrolling');
+          });
+  
+          nav.addEventListener('mouseover', () => {
+              nav.classList.add('scrolling');
+          });
+        </script>
+        <!--Java Script code for attendance calculations-->
+        <script>
+            // Get the table rows
+            var rows = document.querySelectorAll('table tr');
+
+            // Loop through each row
+            rows.forEach(function(row, index) {
+              // Skip the header row
+              if (index === 0) return;
+            
+              // Get the cells in the row
+              var cells = row.cells;
+            
+              // Get the total days and days absent values
+              var totalDays = parseInt(cells[1].textContent);
+              var daysAbsent = parseInt(cells[2].textContent);
+            
+              // Calculate the attendance percentage
+              var attendancePercentage = ((totalDays - daysAbsent) / totalDays) * 100;
+            
+              // Format the percentage to 2 decimal places
+              attendancePercentage = attendancePercentage.toFixed(2);
+            
+              // Update the attendance percentage cell
+              cells[3].textContent = attendancePercentage + '%';
+            });
+        </script>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+          
+            for (i = 0; i < coll.length; i++) {
+              var content = coll[i].nextElementSibling;
+              if (content.childElementCount === 0) {
+                coll[i].classList.add("disabled");
+              } else {
+                coll[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var content = this.nextElementSibling;
+                  if (content.style.display === "block") {
+                    content.style.display = "none";
+                  } else {
+                    content.style.display = "block";
+                  }
+                });
+              }
+            }
+        </script>
+    </body>
+</html>

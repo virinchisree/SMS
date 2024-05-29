@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Student Panel</title>
+        <link rel="stylesheet" href="Studentpanel.CSS">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="student-info">
+                    <div class="student-name">
+                        <h1>Student name</h1>
+                    </div>
+                    <div class="student-email">
+                        <h2>Student Email</h2>
+                    </div>
+                    <div class="student-ID">
+                        <h2>Student ID</h2>
+                    </div>
+                    <div class="student-class">
+                        <h3>Student class</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="classes.html">Classes</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="timetable.html">Time Table</a>
+                        <a href="exams.html">Exams</a>
+                        <a href="marks.html" class="active">Marks</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                    <div class="school-name">
+                      <h2>School Name</h2>
+                    </div>
+                    <div class="school-trademark">
+                        <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Student Portal - Marks</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="student-marks">
+                        <div class="tab">
+                            <div id="Exams" class="tab-content">
+                                <div class="exam-tabs">
+                                    <button type="button" class="exam-tab-button" onclick="show(event, 'unit')" id="defaultExamTab"><strong>Unit test</strong></button>
+                                    <button type="button" class="exam-tab-button" onclick="show(event, 'quarterly')" ><strong>Quarterly Exams</strong></button>
+                                    <button type="button" class="exam-tab-button" onclick="show(event, 'half-yearly')" ><strong>Half Yearly Exams</strong></button>
+                                    <button type="button" class="exam-tab-button" onclick="show(event, 'annually')" ><strong>Annually Exams</strong></button>
+                                </div>
+                                <div id="unit" class="exam-tab-content">
+                                    <h1>Unit Tests</h1>
+                                    <div class="unit-test-marks">
+                                        <table>
+                                            <tr>
+                                              <th>Subject</th>
+                                              <th>Marks</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Math</td>
+                                              <td>A</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Science</td>
+                                              <td>B</td>
+                                            </tr>
+                                            <tr>
+                                              <td>English</td>
+                                              <td>C+</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Sanskrit</td>
+                                              <td>C</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Biology</td>
+                                              <td>C-</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Physics</td>
+                                              <td>D+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hindi</td>
+                                                <td>E</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Telugu</td>
+                                                <td>F</td>
+                                            </tr>
+                                        </table>
+                                        <div class="summary">
+                                            <h3>Summary</h3>
+                                            <div class="marks-summary">
+                                                <table>
+                                                    <tr>
+                                                        <td>A+ = 95 - 100 </td>
+                                                        <td>A = 90 - 95</td>
+                                                        <td>A- = 85 - 90</td>
+                                                        <td>B+ = 80 - 85</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>B = 75 - 80</td>
+                                                        <td>B- = 70 - 75</td>
+                                                        <td>C+ = 65 - 70</td>
+                                                        <td>C = 60 - 65</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>c- = 55 - 60</td>
+                                                        <td>d+ = 50 - 55</td>
+                                                        <td>d = 45 - 50</td>
+                                                        <td>d- = 40 - 45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">E = Just Pass</td>
+                                                        <td colspan="2">F = Fail</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="quarterly" class="exam-tab-content">
+                                    <h1>Quarterly Exams</h1>
+                                    <div class="quarterly-marks">
+                                        <table>
+                                            <tr>
+                                              <th>Subject</th>
+                                              <th>Marks</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Math</td>
+                                              <td>A</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Science</td>
+                                              <td>B</td>
+                                            </tr>
+                                            <tr>
+                                              <td>English</td>
+                                              <td>C+</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Sanskrit</td>
+                                              <td>C</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Biology</td>
+                                              <td>C-</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Physics</td>
+                                              <td>D+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hindi</td>
+                                                <td>E</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Telugu</td>
+                                                <td>F</td>
+                                            </tr>
+                                        </table>
+                                        <div class="summary">
+                                            <h3>Summary</h3>
+                                            <div class="marks-summary">
+                                                <table>
+                                                    <tr>
+                                                        <td>A+ = 95 - 100 </td>
+                                                        <td>A = 90 - 95</td>
+                                                        <td>A- = 85 - 90</td>
+                                                        <td>B+ = 80 - 85</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>B = 75 - 80</td>
+                                                        <td>B- = 70 - 75</td>
+                                                        <td>C+ = 65 - 70</td>
+                                                        <td>C = 60 - 65</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>c- = 55 - 60</td>
+                                                        <td>d+ = 50 - 55</td>
+                                                        <td>d = 45 - 50</td>
+                                                        <td>d- = 40 - 45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">E = Just Pass</td>
+                                                        <td colspan="2">F = Fail</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="half-yearly" class="exam-tab-content">
+                                    <h1>Half-Yearly Exams</h1>
+                                    <div class="half-yearly-marks">
+                                        <table>
+                                            <tr>
+                                              <th>Subject</th>
+                                              <th>Marks</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Math</td>
+                                              <td>A</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Science</td>
+                                              <td>B</td>
+                                            </tr>
+                                            <tr>
+                                              <td>English</td>
+                                              <td>C+</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Sanskrit</td>
+                                              <td>C</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Biology</td>
+                                              <td>C-</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Physics</td>
+                                              <td>D+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hindi</td>
+                                                <td>E</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Telugu</td>
+                                                <td>F</td>
+                                            </tr>
+                                        </table>
+                                        <div class="summary">
+                                            <h3>Summary</h3>
+                                            <div class="marks-summary">
+                                                <table>
+                                                    <tr>
+                                                        <td>A+ = 95 - 100 </td>
+                                                        <td>A = 90 - 95</td>
+                                                        <td>A- = 85 - 90</td>
+                                                        <td>B+ = 80 - 85</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>B = 75 - 80</td>
+                                                        <td>B- = 70 - 75</td>
+                                                        <td>C+ = 65 - 70</td>
+                                                        <td>C = 60 - 65</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>c- = 55 - 60</td>
+                                                        <td>d+ = 50 - 55</td>
+                                                        <td>d = 45 - 50</td>
+                                                        <td>d- = 40 - 45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">E = Just Pass</td>
+                                                        <td colspan="2">F = Fail</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="annually" class="exam-tab-content">
+                                    <h1>Annually Exams</h1>
+                                    <div class="annually-marks">
+                                        <table>
+                                            <tr>
+                                              <th>Subject</th>
+                                              <th>Marks</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Math</td>
+                                              <td>A</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Science</td>
+                                              <td>B</td>
+                                            </tr>
+                                            <tr>
+                                              <td>English</td>
+                                              <td>C+</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Sanskrit</td>
+                                              <td>C</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Biology</td>
+                                              <td>C-</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Physics</td>
+                                              <td>D+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hindi</td>
+                                                <td>E</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Telugu</td>
+                                                <td>F</td>
+                                            </tr>
+                                        </table>
+                                        <div class="summary">
+                                            <h3>Summary</h3>
+                                            <div class="marks-summary">
+                                                <table>
+                                                    <tr>
+                                                        <td>A+ = 95 - 100 </td>
+                                                        <td>A = 90 - 95</td>
+                                                        <td>A- = 85 - 90</td>
+                                                        <td>B+ = 80 - 85</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>B = 75 - 80</td>
+                                                        <td>B- = 70 - 75</td>
+                                                        <td>C+ = 65 - 70</td>
+                                                        <td>C = 60 - 65</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>c- = 55 - 60</td>
+                                                        <td>d+ = 50 - 55</td>
+                                                        <td>d = 45 - 50</td>
+                                                        <td>d- = 40 - 45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">E = Just Pass</td>
+                                                        <td colspan="2">F = Fail</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This is for scrolling in the nav-->
+        <script>
+            const nav = document.querySelector('nav');
+    
+            nav.addEventListener('scroll', () => {
+                nav.classList.add('scrolling');
+            });
+    
+            nav.addEventListener('mouseleave', () => {
+                nav.classList.remove('scrolling');
+            });
+    
+            nav.addEventListener('mouseover', () => {
+                nav.classList.add('scrolling');
+            });
+        </script>
+        <!--Java Script For controlling the tabs-->
+        <script>
+            /*This is for Marks Tab*/
+            function show(event, tabname) {
+                var i, tabcontent, tabbutton;
+                // Hide the tab content
+                tabcontent = document.getElementsByClassName("exam-tab-content");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                // Remove the active class from all tab buttons
+                tabbutton = document.getElementsByClassName("exam-tab-button");
+                for (i = 0; i < tabbutton.length; i++) {
+                  tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+                }
+                // Set the selected tab to active and display the content
+                document.getElementById(tabname).style.display = "block";
+                event.currentTarget.classList.add("active");
+            }
+
+        document.getElementById('defaultExamTab').click();
+        </script>
+    </body>
+</html>

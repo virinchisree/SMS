@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Admin Panel</title>
+        <link rel="stylesheet" href="Adminpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="admin-info">
+                    <div class="admin-name">
+                        <h1>Admin Name</h1>
+                    </div>
+                    <div class="admin-email">
+                        <h2>Admin Email</h2>
+                    </div>
+                    <div class="admin-ID">
+                        <h2>Admin ID</h2>
+                    </div>
+                    <div class="admin-phone">
+                        <h3>Admin Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav id="nav">
+                        <a href="classes.html">Classes</a>
+                        <a href="section.html">Sections</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="exams.html" class="active">Exams</a>
+                        <a href="departments.html">Departments</a>
+                        <a href="academicsession.html">Academic Session</a>
+                        <a href="employeecategories.html">Employee Categories</a>
+                        <a href="leaves.html">Leave Types</a>
+                        <a href="studentpayment.html">Student Payment Types</a>
+                        <a href="feecollection.html">Fee Collection</a>
+                        <a href="">Sms Integration</a>
+                        <a href="managebus.html">Manages Buses</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="timetable.html">Time Table Module</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Admin Portal - Exams</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="admin-exams">
+                        <div class="exams-button">
+                            <div class="add-button">
+                                <button type="button" onclick="document.getElementById('id01').style.display = 'block'">
+                                  <span aria-hidden="true" id="add-exams-symbol"><strong>+</strong></span>
+                                  <span class="sr-only"><strong>Add</strong></span>
+                                </button>
+                            </div>                        
+                        </div>
+                        <div class="created-exams-container" id="exams-list">
+                            <div class="exam-collapsible-content">
+                                <div class="created-exam" id="collapsible">
+                                    <div class="exam-name">
+                                        <h2>Class 1-A: Unit-Test-1</h2>
+                                    </div>
+                                    <div class="exam-functions">
+                                        <div class="exam-edit" id="exam-edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                                <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="exam-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                              <polyline points="3 6 5 6 21 6"></polyline>
+                                              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                              <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-content" data-target="exam-1-a">
+                                    <!-- Add your table or any other content you want to show here -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Date</th>
+                                                <th>time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Math</td>
+                                                <td>2023-03-15</td>
+                                                <td>10:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>English</td>
+                                                <td>2023-03-16</td>
+                                                <td>10:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Science</td>
+                                                <td>2023-03-15</td>
+                                                <td>10:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Social Studies</td>
+                                                <td>2023-03-15</td>
+                                                <td>10:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hindi</td>
+                                                <td>2023-03-15</td>
+                                                <td>10:00 AM</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This brings up the class adding form-->
+        <div id="id01" class="modal" style="display: none;">
+            <form id="exam-form" class="modal-content animate">
+                <span class="close" onclick="closeExamsForm()">&times;</span>
+                <div class="container">
+                    <div class="class-section-select-container">
+                        <div class="class-selector">
+                            <label for="select-class">Select Class</label>
+                            <select name="select-class" id="select-class" required>
+                                <option value="hidden"></option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        <div class="section-selector">
+                            <label for="select=section"><b>Section</b></label>
+                            <select name="select-section" id="select-section">
+                                <option value="hidden"></option>
+                                <option value="A">A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="exam-type-selector">
+                        <div class="select-exam-type">
+                            <label for="exam-type">Exam Type</label>
+                            <select name="exam-type" id="exam-type">
+                                <option value="hidden"></option>
+                                <option value="unit-test">Unit-test</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="half-yearly">Half-Yearly</option>
+                                <option value="annually">annually</option>
+                            </select>
+                        </div>
+                        <div class="select-unit-test-number">
+                            <label for="unit-test-number">Unit-Test Number</label>
+                            <select name="unit-test-number" id="unit-test-number" disabled>
+                                <option value="hidden"></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table id="exam-table">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="row0">
+                                    <td><input type="text" name="subject"></td>
+                                    <td><input type="date" name="date"></td>
+                                    <td><input type="time" name="time"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" id="add-row-btn">Add Row</button>
+                    </div>
+                    <div class="submit-button">
+                        <button type="submit">Create Section</button>
+                        <button type="button" onclick="closeExamsForm()" class="cancelbtn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>
+            function closeExamsForm(){
+                formData = document.getElementById('exam-form');
+                formData.reset();
+                document.getElementById('id01').style.display='none';
+
+            }
+        </script>
+        <!--This is for the scroll bar in the Nav Bar-->
+        <script>
+        const nav = document.querySelector('nav');
+
+        nav.addEventListener('scroll', () => {
+            nav.classList.add('scrolling');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            nav.classList.remove('scrolling');
+        });
+
+        nav.addEventListener('mouseover', () => {
+            nav.classList.add('scrolling');
+        });
+        </script>
+        <!--This java script is for creating Exams-->
+        <script>
+        // section.js
+
+        // Get the section list element
+        const examList = document.getElementById('exams-list');
+
+        // Function to add a new section to the list
+        function addSection(sectionName, className, examName, unitTestNumber, examTableData) {
+          const examItem = document.createElement('div');
+          examItem.classList.add('exam-collapsible-content');
+
+          let template = `
+          <div class="created-exam" id="collapsible">
+          <div class="exam-name">
+            <h2>Class ${className}-${sectionName} : ${examName}`;
+                if (unitTestNumber === 'hidden') {
+                    template += `</h2>
+                    </div>
+                    <div class="exam-functions">
+                            <div class="exam-edit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                  <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                </svg>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="exam-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <polyline points="3 6 5 6 21 6"></polyline>
+                                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                  <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exam-content">
+                        <table id="exam-table">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${createTableRows(examTableData)}
+                            </tbody>
+                        </table>
+                    </div>`;
+                }else{
+                    template += ` - ${unitTestNumber}</h2>
+                    </div>
+                    <div class="exam-functions">
+                        <div class="exam-edit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                              <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                            </svg>
+                        </div>  
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="exam-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="3 6 5 6 21 6"></polyline>
+                              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                              <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="exam-content">
+                        <table id="exam-table">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${createTableRows(examTableData)}
+                            </tbody>
+                        </table>
+                    </div>`;
+                }
+        
+          examItem.innerHTML = template;
+          examList.appendChild(examItem);
+        }
+
+        function createTableRows(examTableData) {
+          let rows = '';
+          examTableData.forEach((row, index) => {
+            rows += `
+              <tr id="row${index}">
+                <td>${row.subject}</td>
+                <td>${row.date}</td>
+                <td>${row.time}</td>
+              </tr>
+            `;
+          });
+          return rows;
+        }
+
+        // Get the section form element
+        const examForm = document.getElementById('exam-form');
+
+        // Add an event listener to the form submission
+        examForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+        
+          const classInput = document.getElementById('select-class');
+          const className = classInput.value.trim();
+          const sectionInput = document.getElementById('select-section');
+          const sectionName = sectionInput.value.trim();
+          const examInput = document.getElementById('exam-type');
+          const examName = examInput.value.trim();
+          const unitTestNumberInput = document.getElementById('unit-test-number');
+          const unitTestNumber = unitTestNumberInput.value.trim();
+          if (sectionName, className, examName, unitTestNumber, examTableData) {
+            addSection(sectionName, className, examName, unitTestNumber, examTableData);
+            sectionInput.value = '';
+            classInput.value = '';
+            examInput.value = '';
+            unitTestNumberInput.value='';
+            document.getElementById('id01').style.display = 'none';
+          }
+        });
+
+        // Add an event listener to the section list
+        document.getElementById('exams-list').addEventListener('click', (event) => {
+          if (event.target.classList.contains('exam-delete')) {
+            const examItem = event.target.closest('.exam-collapsible-content');
+            examItem.remove();
+          }
+        });
+        </script>
+        <!--This js is for enabling the unit-test-number-->
+        <script>
+            const examTypeSelect = document.getElementById('exam-type');
+            const unitTestNumberSelect = document.getElementById('unit-test-number');
+          
+            examTypeSelect.addEventListener('change', (event) => {
+              const selectedExamType = event.target.value;
+              unitTestNumberSelect.disabled = selectedExamType !== 'unit-test';
+            });
+        </script>
+        <!--This is for the collapsible content-->
+        <script>
+            var coll = document.querySelectorAll("#collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
+        <!--This is for adding more cells to the table-->
+        <script>
+        const examTableData = [];
+        function addRow() {
+            const tbody = document.querySelector('#exam-table tbody')
+            const rowCount = tbody.rows.length; // exclude header row
+            const row = tbody.insertRow(rowCount);
+            row.id = `row${rowCount}`;
+        
+            row.insertCell(0).innerHTML = `<input type="text" name="subject">`;
+            row.insertCell(1).innerHTML = `<input type="date" name="date">`;
+            row.insertCell(2).innerHTML = `<input type="time" name="time">`;
+
+            const newRowData = {
+                subject:'',
+                date:'',
+                time:''
+            };
+
+            console.log(newRowData);
+
+            examTableData.push(newRowData);
+        }
+
+        document.getElementById('add-row-btn').addEventListener('click', addRow);
+        </script>
+    </body>
+</html>

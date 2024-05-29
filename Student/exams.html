@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Student Panel</title>
+        <link rel="stylesheet" href="Studentpanel.CSS">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="student-info">
+                    <div class="student-name">
+                        <h1>Student name</h1>
+                    </div>
+                    <div class="student-email">
+                        <h2>Student Email</h2>
+                    </div>
+                    <div class="student-ID">
+                        <h2>Student ID</h2>
+                    </div>
+                    <div class="student-class">
+                        <h3>Student class</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="classes.html">Classes</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="timetable.html">Time Table</a>
+                        <a href="exams.html" class="active">Exams</a>
+                        <a href="marks.html">Marks</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Student Portal - Exams</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="student-exams">
+                        <div class="tab">
+                            <div id="Exams" class="tab-content">
+                                <div class="exam-tabs">
+                                    <button type="button" class="exam-tab-button" onclick="show(event, 'unit')" id="defaultExamTab"><strong>Unit test</strong></button>
+                                    <button type="button" class="exam-tab-button" onclick="show(event, 'quarterly')" ><strong>Quarterly Exams</strong></button>
+                                    <button type="button" class="exam-tab-button" onclick="show(event, 'half-yearly')" ><strong>Half Yearly Exams</strong></button>
+                                    <button type="button" class="exam-tab-button" onclick="show(event, 'annually')" ><strong>Annually Exams</strong></button>
+                                </div>
+                                <div id="unit" class="exam-tab-content">
+                                    <h1>Unit Test Schedule for the Week</h1>
+                                    <div class="unit-test-time-table">
+                                        <table>
+                                            <tr>
+                                              <th>Day</th>
+                                              <th>Subject</th>
+                                              <th>Timing</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Wednesday, May 1, 2024</td>
+                                              <td>Math</td>
+                                              <td>9:00 AM - 10:30 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Wednesday, May 2, 2024</td>
+                                              <td>Science</td>
+                                              <td>9:00 AM - 10:30 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thursday, May 3, 2024</td>
+                                              <td>English</td>
+                                              <td>9:00 AM - 10:30 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thursday, May 4, 2024</td>
+                                              <td>Sanskrit</td>
+                                              <td>9:00 AM - 10:30 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Friday, May 5, 2024</td>
+                                              <td>Biology</td>
+                                              <td>9:00 AM - 10:30 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Friday, May 6, 2024</td>
+                                              <td>Physics</td>
+                                              <td>9:00 AM - 10:30 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday, May 7, 2024</td>
+                                                <td>Hindi</td>
+                                                <td>9:00 AM - 10:30 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday, May 8, 2024</td>
+                                                <td>Telugu</td>
+                                                <td>9:00 AM - 10:30 AM</td>
+                                            </tr>
+                                          </table>
+                                          <h2>Important Notice</h2>
+                                          <h3>Daily Classes Will Continue After The Exams</h3>
+                                    </div>
+                                </div>
+                                <div id="quarterly" class="exam-tab-content">
+                                    <h1>Quarterly Exams</h1>
+                                    <div class="quarterly-time-table">
+                                        <table>
+                                            <tr>
+                                              <th>Day</th>
+                                              <th>Subject</th>
+                                              <th>Timing</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Wednesday, May 1, 2024</td>
+                                              <td>Math</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Wednesday, May 3, 2024</td>
+                                              <td>Science</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thursday, May 5, 2024</td>
+                                              <td>English</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thursday, May 7, 2024</td>
+                                              <td>Sanskrit</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Friday, May 9, 2024</td>
+                                              <td>Biology</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Friday, May 11, 2024</td>
+                                              <td>Physics</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday, May 13, 2024</td>
+                                                <td>Hindi</td>
+                                                <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday, May 15, 2024</td>
+                                                <td>Telugu</td>
+                                                <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                          </table>
+                                          <h2>Important Notice</h2>
+                                          <h3>Daily Classes Will cancelled After The Exams</h3>
+                                    </div>
+                                </div>
+                                <div id="half-yearly" class="exam-tab-content">
+                                    <h1>Half-Yearly Exams</h1>
+                                    <div class="half-yearly-time-table">
+                                        <table>
+                                            <tr>
+                                              <th>Day</th>
+                                              <th>Subject</th>
+                                              <th>Timing</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Wednesday, May 1, 2024</td>
+                                              <td>Math</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Wednesday, May 4, 2024</td>
+                                              <td>Science</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thursday, May 7, 2024</td>
+                                              <td>English</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thursday, May 10, 2024</td>
+                                              <td>Sanskrit</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Friday, May 13, 2024</td>
+                                              <td>Biology</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Friday, May 16, 2024</td>
+                                              <td>Physics</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday, May 19, 2024</td>
+                                                <td>Hindi</td>
+                                                <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday, May 22, 2024</td>
+                                                <td>Telugu</td>
+                                                <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                          </table>
+                                          <h2>Important Notice</h2>
+                                          <h3>Daily Classes Will cancelled After The Exams</h3>
+                                    </div>
+                                </div>
+                                <div id="annually" class="exam-tab-content">
+                                    <h1>Annually Exams</h1>
+                                    <div class="annually-time-table">
+                                        <table>
+                                            <tr>
+                                              <th>Day</th>
+                                              <th>Subject</th>
+                                              <th>Timing</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Wednesday, May 1, 2024</td>
+                                              <td>Math</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Wednesday, May 5, 2024</td>
+                                              <td>Science</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thursday, May 9, 2024</td>
+                                              <td>English</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thursday, May 13, 2024</td>
+                                              <td>Sanskrit</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Friday, May 17, 2024</td>
+                                              <td>Biology</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Friday, May 21, 2024</td>
+                                              <td>Physics</td>
+                                              <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday, May 25, 2024</td>
+                                                <td>Hindi</td>
+                                                <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday, May 29, 2024</td>
+                                                <td>Telugu</td>
+                                                <td>9:00 AM - 12:00 AM</td>
+                                            </tr>
+                                          </table>
+                                          <h2>Important Notice</h2>
+                                          <h3>Daily Classes Will cancelled After The Exams</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This is for scrolling in the nav-->
+        <script>
+          const nav = document.querySelector('nav');
+  
+          nav.addEventListener('scroll', () => {
+              nav.classList.add('scrolling');
+          });
+  
+          nav.addEventListener('mouseleave', () => {
+              nav.classList.remove('scrolling');
+          });
+  
+          nav.addEventListener('mouseover', () => {
+              nav.classList.add('scrolling');
+          });
+        </script>
+        <!--Java Script For controlling the tabs-->
+        <script>
+            /*This is for Exams Tab*/
+            function show(event, tabname) {
+                var i, tabcontent, tabbutton;
+                // Hide the tab content
+                tabcontent = document.getElementsByClassName("exam-tab-content");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                // Remove the active class from all tab buttons
+                tabbutton = document.getElementsByClassName("exam-tab-button");
+                for (i = 0; i < tabbutton.length; i++) {
+                  tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+                }
+                // Set the selected tab to active and display the content
+                document.getElementById(tabname).style.display = "block";
+                event.currentTarget.classList.add("active");
+            }
+
+        document.getElementById('defaultExamTab').click();
+        </script>
+    </body>
+</html>

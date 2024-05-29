@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Non-Teacher Panel</title>
+        <link rel="stylesheet" href="Nteachering.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="non-teacher-info">
+                    <div class="non-teacher-name">
+                        <h1>Non-Teacher Name</h1>
+                    </div>
+                    <div class="non-teacher-email">
+                        <h2>Non-Teacher Email</h2>
+                    </div>
+                    <div class="non-teacher-ID">
+                        <h2>Non-Teacher ID</h2>
+                    </div>
+                    <div class="non-teacher-phone">
+                        <h3>Non-Teacher Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="shifts.html" class="active">Shifts</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="leaves.html">Leaves</a>
+                        <a href="salary.html">Salary</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Non-Teacher Portal - Shifts</h1>  
+                </div>
+                <div class="main-content">
+                    <div class="non-teacher-time-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Period / Days</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1st Period</td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2nd Period</td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="background-color: #E0FCFF;"><center>Break</center></td>
+                                </tr>
+                                <tr>
+                                    <td>3rd Period</td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>4th Period</td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #E0FCFF;" colspan="7"><center>Lunch</center></td>
+                                </tr>
+                                <tr>
+                                    <td>5th Period</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                </tr>
+                                <tr>
+                                    <td>6th Period</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="background-color: #E0FCFF;"><center>Break</center></td>
+                                </tr>
+                                <tr>
+                                    <td>7th Period</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                </tr>
+                                <tr>
+                                    <td>8th Period</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                    <td></td>
+                                    <td>Shift</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Java Script-->
+        <script>
+        // Select only the rows that contain timetable data
+        const tableRows = document.querySelectorAll('.non-teacher-time-table table tr');
+
+        tableRows.forEach((row) => {
+          const cells = row.cells;
+          for (let i = 1; i < cells.length; i++) {
+            const cell = cells[i];
+            if (!cell.textContent) {
+              cell.textContent = '---';
+            }
+          }
+        });
+        </script>
+    </body>
+</html>

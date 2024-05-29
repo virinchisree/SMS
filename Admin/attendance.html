@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Admin Panel</title>
+        <link rel="stylesheet" href="Adminpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="admin-info">
+                    <div class="admin-name">
+                        <h1>Admin Name</h1>
+                    </div>
+                    <div class="admin-email">
+                        <h2>Admin Email</h2>
+                    </div>
+                    <div class="admin-ID">
+                        <h2>Admin ID</h2>
+                    </div>
+                    <div class="admin-phone">
+                        <h3>Admin Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav id="nav">
+                        <a href="classes.html">Classes</a>
+                        <a href="section.html">Sections</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="exams.html">Exams</a>
+                        <a href="departments.html">Departments</a>
+                        <a href="academicsession.html">Academic Session</a>
+                        <a href="employeecategories.html">Employee Categories</a>
+                        <a href="leaves.html">Leave Types</a>
+                        <a href="studentpayment.html">Student Payment Types</a>
+                        <a href="feecollection.html">Fee Collection</a>
+                        <a href="">Sms Integration</a>
+                        <a href="managebus.html">Manages Buses</a>
+                        <a href="attendance.html" class="active" id="academic-link">Attendance</a>
+                        <a href="timetable.html">Time Table Module</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p> 
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Admin Portal - Attendance</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="admin-attendance">
+                        <div class="attendance-button">
+                            <div class="add-button">
+                                <button type="button" onclick="document.getElementById('id01').style.display = 'block'">
+                                  <span aria-hidden="true" id="add-attendance-symbol"><strong>+</strong></span>
+                                  <span class="sr-only"><strong>Add</strong></span>
+                                </button>
+                            </div>                        
+                        </div>
+                        <div class="created-attendance-container" id="attendance-list">
+                            <div class="created-attendance">
+                                <div class="attendance-name">
+                                    <h2>Teacher Name</h2><hr><h5>Employee Type</h5>
+                                </div>
+                                <div class="attendance-functions">
+                                    <div class="upload-attendance">
+                                        <input type="file" name="upload-attendance" id="upload-attendance">
+                                        <button type="button">Submit</button>
+                                    </div>
+                                    <div class="attendance-edit" id="class-edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                        <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                    </svg>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg"  class="attendance-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="3 6 5 6 21 6"></polyline>
+                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                            <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This brings up the class adding form-->
+        <div id="id01" class="modal" style="display: none;">
+            <form id="attendance-form" class="modal-content animate">
+                <span class="close" onclick="closeAttendanceForm()">&times;</span>
+                <div class="container">
+                    <label for="employee-name"><b>Employee Name</b></label>
+                    <input type="text" placeholder="Enter Employee Name" name="employee-name" id="employee-name" required>
+                    <label for="employee-type"><b>Employee Type</b></label>
+                    <Select name="employee-type" id="employee-type">
+                        <option value="hidden"></option>
+                        <option value="teacher">Teaching Staff</option>
+                        <option value="non-teacher">Non-Teaching Staff</option>
+                    </Select>
+                    <div class="submit-button">
+                        <button type="submit">Create Class</button>
+                        <button type="button" onclick="closeAttendanceForm()" class="cancelbtn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--This is for Resetting the Form-->
+        <script>
+            function closeAttendanceForm(){
+                formData = document.getElementById('attendance-form');
+                formData.reset();
+                document.getElementById('id01').style.display='none';
+
+            }
+        </script>
+        <!--This JavaScript is for scrolling to the active link in the side navigation bar-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const activeLink = document.querySelector("a.active");
+                if (activeLink) {
+                    const linkId = activeLink.id;
+                    const linkElement = document.getElementById(linkId);
+                    linkElement.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        </script>
+        <script>
+        const nav = document.querySelector('nav');
+
+        nav.addEventListener('scroll', () => {
+            nav.classList.add('scrolling');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            nav.classList.remove('scrolling');
+        });
+
+        nav.addEventListener('mouseover', () => {
+            nav.classList.add('scrolling');
+        });
+        </script>
+        <!--This java script is for creating Departments-->
+        <script>
+            function addClassTOList(employeeName, employeeType){
+                const attendanceList = document.getElementById('attendance-list');
+                const attendanceItem = document.createElement('div');
+                attendanceItem.classList.add('created-attendance');
+
+                attendanceItem.innerHTML = `
+                <div class="attendance-name">
+                    <h2>${employeeName}</h2><hr><h5>${employeeType}</h5>
+                </div>
+                <div class="attendance-functions">
+                    <div class="upload-attendance">
+                                        <input type="file" name="upload-attendance" id="upload-attendance">
+                                        <button type="button">Submit</button>
+                    </div>
+                    <div class="attendance-edit" id="class-edit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                            <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg"  class="attendance-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </div>
+                </div>`;
+
+                attendanceList.appendChild(attendanceItem);
+            }
+
+            /*This is for handling the class creation form*/
+            const academicForm = document.getElementById('attendance-form');
+            academicForm.addEventListener('submit', (event)=>{
+                event.preventDefault();
+
+                const employeeNameInput = document.getElementById('employee-name');
+                const employeeName = employeeNameInput.value.trim();
+                const employeeTypeInput = document.getElementById('employee-type');
+                const employeeType = employeeTypeInput.value.trim();
+
+                if(employeeName, employeeType){
+                    addClassTOList(employeeName, employeeType);
+                    employeeNameInput.value = '';
+                    employeeTypeInput.value = '';
+                    document.getElementById('id01').style.display='none';
+                }
+            });
+
+        // Add an event listener to the section list
+        document.getElementById('attendance-list').addEventListener('click', (event) => {
+          if (event.target.classList.contains('attendance-delete')) {
+            const attendanceItem = event.target.closest('.created-attendance');
+            attendanceItem.remove();
+          }
+        });
+        </script>
+    </body>
+</html>

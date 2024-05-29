@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Homepage</title>
+    <link rel="stylesheet" href="schoolstyles.css">
+    <script src="schoolstyles.css"></script>
+</head>
+<body>
+    <div class="main-container">
+        <marquee direction="left" scrollamount="10">This Is where all the updates regarding the school are shown</marquee>
+        <header>
+            <a href="SchoolMainpage.html">
+                <div class="logo">
+                    <img src="pngtree-school-logo-png-image_6851480.png" alt="School Logo" width="50px" height="50px">
+                    <hr style="height: 50px;">
+                    <h1>LTW High school</h1>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a onclick="document.getElementById('id01').style.display='block'">Principal</a></li>
+                    <li><a onclick="document.getElementById('id03').style.display='block'">Staff</a></li>
+                    <li><a onclick="document.getElementById('id02').style.display='block'">Student</a></li>
+                    <li><a onclick="document.getElementById('id02').style.display='block'">Parent</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <video loop src="3288313-hd_1920_1080_30fps.mp4" autoplay muted></video>
+            <div class="text-block">
+                <div class="curtain">
+                    <div class="page-heading">
+                        <h1>Registration Page</h1>
+                    </div>
+                    <form>
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" id="phone-number" name="phone-number" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <button type="submit" style="border-radius: 10px;">Register</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="Address">
+                    <h6>Address</h6>
+                    <p>Street:  259 2nd Floor, Parklane</p>
+                    <p>City:   Hyderabad</p>
+                    <p>State/province/area:Telanga</p>
+                    <p>Phone number:  04055210962</p>
+                    <p>Zip code:  500003</p>
+                    <p>Country calling code:+91</p>
+                    <p>Country:India</p>
+                </div>
+                <hr style="height: 200px;">
+                <div class="Links">
+                    <a href="SchoolMainpage.html">Homepage</a><br>
+                    <a href="About.html">About Us</a><br>
+                    <a href="Contact.html">Contact Us</a><br>
+                </div>
+            </div>
+        </footer>
+        <div id="id01" class="modal" style="display: none;">
+            <form id="principal-login" class="modal-content animate" action="/" method="post">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>                
+                    <button type="submit">Login</button>
+                    <a href="Register.html"><button type="button">Register</button></a>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="clearForm()" class="cancelbtn">Cancel</button>
+                    <span class="psw"><a href="#">Forgot password?</a></span>
+                </div>
+            </form>
+        </div>
+        <div id="id02" class="modal" style="display: none;">
+            <form id="student-login" class="modal-content animate" action="/" method="post">
+                <div class="container">
+                    <label for="uname"><b>Student ID</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>                
+                    <button type="submit">Login</button>
+                    <a href="Studentregister.html"><button type="button">Register</button></a>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="clearForm()" class="cancelbtn">Cancel</button>
+                    <span class="psw"><a href="#">Forgot password?</a></span>
+                </div>
+            </form>
+        </div>
+        <div id="id03" class="modal" style="display: none;">
+            <form id="staff-login" class="modal-content animate" action="/" method="post">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>                
+                    <button type="submit">Login</button>
+                    <a href="Staffregister.html"><button type="button">Register</button></a>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="clearForm()" class="cancelbtn">Cancel</button>
+                    <span class="psw"><a href="#">Forgot password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--JavaScript for resetting the login forms-->
+    <script>
+        function clearForm(){
+            document.getElementById("student-login").reset();
+            document.getElementById("staff-login").reset();
+            document.getElementById("principal-login").reset();
+            document.getElementById("id01").style.display='none';
+            document.getElementById("id03").style.display='none';
+            document.getElementById("id02").style.display='none';
+        }
+    </script>
+</body>
+</html>

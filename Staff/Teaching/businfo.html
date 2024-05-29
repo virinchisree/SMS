@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Teacher Panel</title>
+        <link rel="stylesheet" href="Teacherpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="teacher-info">
+                    <div class="teacher-name">
+                        <h1>Teacher Name</h1>
+                    </div>
+                    <div class="teacher-email">
+                        <h2>Teacher Email</h2>
+                    </div>
+                    <div class="teacher-ID">
+                        <h2>Teacher ID</h2>
+                    </div>
+                    <div class="teacher-phone">
+                        <h3>Teacher Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="classes.html">Classes</a>
+                        <a href="timetable.html">Time Table</a>
+                        <a href="marks.html">Marks</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="leaves.html">Leaves</a>
+                        <a href="salary.html">Salary</a>
+                        <a href="businfo.html" class="active" id="bus-link">Bus Info</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Teacher Portal - Bus Information</h1>  
+                </div>
+                <div class="main-content" style="overflow-y: auto;">
+                    <!--Type from here onwards-->
+                    <div class="bus-route">
+                        <div class="bus-route">
+                            <div class="bus-route-tabs">
+                                <button type="button" class="bus-tab-button" onclick="show(event, 'route-1')" id="defaultRouteTab"><strong>Route - 1</strong></button>
+                                <button type="button" class="bus-tab-button" onclick="show(event, 'route-2')" ><strong>route - 2</strong></button>
+                                <button type="button" class="bus-tab-button" onclick="show(event, 'route-3')" ><strong>route - 3</strong></button>
+                                <button type="button" class="bus-tab-button" onclick="show(event, 'route-4')" ><strong>route - 4</strong></button>
+                            </div>
+                            <div id="route-1" class="bus-content">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15196.783596469666!2d83.3896213!3d17.782488!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1714719637828!5m2!1sen!2sin" width="100%" height="350" style="border:1px solid coral;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <div class="bus-timmings">
+                                    <div class="bus-tabs">
+                                        <button type="button" class="bus-timing-button" onclick="showTiming(event, 'pickUp')" id="defaultTimeTab"><strong>Pick Up</strong></button>
+                                        <button type="button" class="bus-timing-button" onclick="showTiming(event, 'dropOff')" ><strong>Drop Off</strong></button>
+                                    </div>
+                                    <div id="pickUp" class="bus-timing-content">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Timings</td>
+                                                </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Komadhi</td>
+                                                    <td>7:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Madhurwada</td>
+                                                    <td>7:45 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yendada</td>
+                                                    <td>8:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isakathota</td>
+                                                    <td>8:30 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Maddilapalem</td>
+                                                    <td>8:45 AM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="dropOff" class="bus-timing-content">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Timings</td>
+                                                </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Maddilapalem</td>
+                                                    <td>6:15 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isakathota</td>
+                                                    <td>6:45 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yendada</td>
+                                                    <td>7:15 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Madhurwada</td>
+                                                    <td>7:35 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Komadhi</td>
+                                                    <td>8:15 PM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="route-2" class="bus-content">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15196.783596469666!2d83.3896213!3d17.782488!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1714719637828!5m2!1sen!2sin" width="100%" height="350" style="border:1px solid coral;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <div class="bus-timmings">
+                                    <div class="bus-tabs">
+                                        <button type="button" class="bus-timing-button-route2" onclick="route2(event, 'route2pickup')" id="defaultRoute2"><strong>Pick Up</strong></button>
+                                        <button type="button" class="bus-timing-button-route2" onclick="route2(event, 'route2dropOff')" ><strong>Drop Off</strong></button>
+                                    </div>
+                                    <div id="route2pickup" class="bus-timing-route2">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Timings</td>
+                                                </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Komadhi</td>
+                                                    <td>7:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Madhurwada</td>
+                                                    <td>7:45 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yendada</td>
+                                                    <td>8:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isakathota</td>
+                                                    <td>8:30 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Maddilapalem</td>
+                                                    <td>8:45 AM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="route2dropOff" class="bus-timing-route2">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Timings</td>
+                                                </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Maddilapalem</td>
+                                                    <td>6:15 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isakathota</td>
+                                                    <td>6:45 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yendada</td>
+                                                    <td>7:15 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Madhurwada</td>
+                                                    <td>7:35 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Komadhi</td>
+                                                    <td>8:15 PM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="route-3" class="bus-content">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15196.783596469666!2d83.3896213!3d17.782488!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1714719637828!5m2!1sen!2sin" width="100%" height="350" style="border:1px solid coral;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <div class="bus-timmings">
+                                    <div class="bus-tabs">
+                                        <button type="button" class="bus-timing-button-route3" onclick="route3(event, 'route3pickUp')" id="defaultRoute3"><strong>Pick Up</strong></button>
+                                        <button type="button" class="bus-timing-button-route3" onclick="route3(event, 'route3dropOff')" ><strong>Drop Off</strong></button>
+                                    </div>
+                                    <div id="route3pickUp" class="bus-timing-route3">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Timings</td>
+                                                </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Komadhi</td>
+                                                    <td>7:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Madhurwada</td>
+                                                    <td>7:45 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yendada</td>
+                                                    <td>8:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isakathota</td>
+                                                    <td>8:30 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Maddilapalem</td>
+                                                    <td>8:45 AM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="route3dropOff" class="bus-timing-route3">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Timings</td>
+                                                </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Maddilapalem</td>
+                                                    <td>6:15 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isakathota</td>
+                                                    <td>6:45 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yendada</td>
+                                                    <td>7:15 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Madhurwada</td>
+                                                    <td>7:35 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Komadhi</td>
+                                                    <td>8:15 PM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="route-4" class="bus-content">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15196.783596469666!2d83.3896213!3d17.782488!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1714719637828!5m2!1sen!2sin" width="100%" height="350" style="border:1px solid coral;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <div class="bus-timmings">
+                                    <div class="bus-tabs">
+                                        <button type="button" class="bus-timing-button-route4" onclick="route4(event, 'route4pickUp')" id="defaultRoute4"><strong>Pick Up</strong></button>
+                                        <button type="button" class="bus-timing-button-route4" onclick="route4(event, 'route4dropOff')" ><strong>Drop Off</strong></button>
+                                    </div>
+                                    <div id="route4pickUp" class="bus-timing-route4">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Timings</td>
+                                                </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Komadhi</td>
+                                                    <td>7:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Madhurwada</td>
+                                                    <td>7:45 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yendada</td>
+                                                    <td>8:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isakathota</td>
+                                                    <td>8:30 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Maddilapalem</td>
+                                                    <td>8:45 AM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="route4dropOff" class="bus-timing-route4">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Timings</td>
+                                                </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Maddilapalem</td>
+                                                    <td>6:15 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Isakathota</td>
+                                                    <td>6:45 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yendada</td>
+                                                    <td>7:15 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Madhurwada</td>
+                                                    <td>7:35 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Komadhi</td>
+                                                    <td>8:15 PM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This is for scrolling in the nav-->
+        <script>
+            const nav = document.querySelector('nav');
+    
+            nav.addEventListener('scroll', () => {
+                nav.classList.add('scrolling');
+            });
+    
+            nav.addEventListener('mouseleave', () => {
+                nav.classList.remove('scrolling');
+            });
+    
+            nav.addEventListener('mouseover', () => {
+                nav.classList.add('scrolling');
+            });
+        </script>
+        <!--javascript-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const activeLink = document.querySelector("a.active");
+                if (activeLink) {
+                    const linkId = activeLink.id;
+                    const linkElement = document.getElementById(linkId);
+                    linkElement.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        </script>
+        <script>
+        function show(event, tabname) {
+            var i, tabcontent, tabbutton;
+            // Hide the tab content
+            tabcontent = document.getElementsByClassName("bus-content");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            // Remove the active class from all tab buttons
+            tabbutton = document.getElementsByClassName("bus-tab-button");
+            for (i = 0; i < tabbutton.length; i++) {
+              tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+            }
+            // Set the selected tab to active and display the content
+            document.getElementById(tabname).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+        document.getElementById('defaultRouteTab').click();
+        </script>
+        <!--This is for the first route-->
+        <script>
+        function showTiming(event, tabname) {
+            var i, tabcontent, tabbutton;
+            // Hide the tab content
+            tabcontent = document.getElementsByClassName("bus-timing-content");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            // Remove the active class from all tab buttons
+            tabbutton = document.getElementsByClassName("bus-timing-button");
+            for (i = 0; i < tabbutton.length; i++) {
+              tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+            }
+            // Set the selected tab to active and display the content
+            document.getElementById(tabname).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+        document.getElementById('defaultTimeTab').click();
+        </script>
+        <!--This is for other routes-->
+        <script>
+        /*This is for the route-2*/
+        function route2(event, tabname) {
+            var i, tabcontent, tabbutton;
+            // Hide the tab content
+            tabcontent = document.getElementsByClassName("bus-timing-route2");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            // Remove the active class from all tab buttons
+            tabbutton = document.getElementsByClassName("bus-timing-button-route2");
+            for (i = 0; i < tabbutton.length; i++) {
+              tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+            }
+            // Set the selected tab to active and display the content
+            document.getElementById(tabname).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+        document.getElementById('defaultRoute2').click();
+
+        /*This is for the route-3*/
+        function route3(event, tabname) {
+            var i, tabcontent, tabbutton;
+            // Hide the tab content
+            tabcontent = document.getElementsByClassName("bus-timing-route3");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            // Remove the active class from all tab buttons
+            tabbutton = document.getElementsByClassName("bus-timing-button-route3");
+            for (i = 0; i < tabbutton.length; i++) {
+              tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+            }
+            // Set the selected tab to active and display the content
+            document.getElementById(tabname).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+        document.getElementById('defaultRoute3').click();
+        
+        /*This is for the route-4*/
+        function route4(event, tabname) {
+            var i, tabcontent, tabbutton;
+            // Hide the tab content
+            tabcontent = document.getElementsByClassName("bus-timing-route4");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            // Remove the active class from all tab buttons
+            tabbutton = document.getElementsByClassName("bus-timing-button-route4");
+            for (i = 0; i < tabbutton.length; i++) {
+              tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+            }
+            // Set the selected tab to active and display the content
+            document.getElementById(tabname).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+        document.getElementById('defaultRoute4').click();
+        </script>
+    </body>
+</html>

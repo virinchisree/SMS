@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Admin Panel</title>
+        <link rel="stylesheet" href="Adminpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="admin-info">
+                    <div class="admin-name">
+                        <h1>Admin Name</h1>
+                    </div>
+                    <div class="admin-email">
+                        <h2>Admin Email</h2>
+                    </div>
+                    <div class="admin-ID">
+                        <h2>Admin ID</h2>
+                    </div>
+                    <div class="admin-phone">
+                        <h3>Admin Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav id="nav">
+                        <a href="classes.html">Classes</a>
+                        <a href="section.html">Sections</a>
+                        <a href="subjects.html" class="active">Subjects</a>
+                        <a href="exams.html">Exams</a>
+                        <a href="departments.html">Departments</a>
+                        <a href="academicsession.html">Academic Session</a>
+                        <a href="employeecategories.html">Employee Categories</a>
+                        <a href="leaves.html">Leave Types</a>
+                        <a href="studentpayment.html">Student Payment Types</a>
+                        <a href="feecollection.html">Fee Collection</a>
+                        <a href="">Sms Integration</a>
+                        <a href="managebus.html">Manages Buses</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="timetable.html">Time Table Module</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Admin Portal - Subjects</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="admin-subject">
+                        <div class="subject-button">
+                            <div class="add-button">
+                                <button type="button" onclick="document.getElementById('id01').style.display = 'block'">
+                                  <span aria-hidden="true" id="add-subject-symbol"><strong>+</strong></span>
+                                  <span class="sr-only"><strong>Add</strong></span>
+                                </button>
+                            </div>                        
+                        </div>
+                        <div class="created-subject-container" id="subject-list">
+                            <div class="created-subject">
+                                <div class="subject-name">
+                                    <h2>Class 1-A : Hindi</h2>
+                                </div>
+                                <div class="subject-functions">
+                                    <div class="subject-edit" id="subject-edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                            <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="subject-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                          <polyline points="3 6 5 6 21 6"></polyline>
+                                          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                          <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This brings up the class adding form-->
+        <div id="id01" class="modal" style="display: none;">
+            <form id="subject-form" class="modal-content animate">
+                <span class="close" onclick="closeSubjectsForm()">&times;</span>
+                <div class="container">
+                    <label for="select-class">Select Class</label>
+                    <select name="select-class" id="select-class" required>
+                        <option value="hidden"></option>
+                        <option value="1">1</option>
+                    </select>
+                    <label for="select-section"><b>Section</b></label>
+                    <select name="select-section" id="select-section">
+                        <option value="hidden"></option>
+                        <option value="A">A</option>
+                    </select>
+                    <label for="subject-name">Subject</label>
+                    <input type="text" placeholder="Enter Subject" name="subject-name" id="subject-name">
+                    <div class="submit-button">
+                        <button type="submit">Create Section</button>
+                        <button type="button" onclick="closeSubjectsForm()" class="cancelbtn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>
+            function closeSubjectsForm(){
+                formData = document.getElementById('subject-form');
+                formData.reset();
+                document.getElementById('id01').style.display='none';
+
+            }
+        </script>
+        <!--This is for the ScrollBar in the Nav Bar-->
+        <script>
+        const nav = document.querySelector('nav');
+
+        nav.addEventListener('scroll', () => {
+            nav.classList.add('scrolling');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            nav.classList.remove('scrolling');
+        });
+
+        nav.addEventListener('mouseover', () => {
+            nav.classList.add('scrolling');
+        });
+        </script>
+        <!--This java script is for creating classes-->
+        <script>
+        // section.js
+
+        // Get the section list element
+        const subjectList = document.getElementById('subject-list');
+
+        // Function to add a new section to the list
+        function addSection(sectionName, className, subjectName) {
+          const subjectItem = document.createElement('div');
+          subjectItem.classList.add('created-subject');
+        
+          // Use a template engine to generate the HTML template
+          const template = `
+            <div class="subject-name">
+              <h2>Class ${className}-${sectionName} : ${subjectName}</h2>
+            </div>
+            <div class="subject-functions">
+              <div class="subject-edit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                    <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                  </svg>
+              </div>
+              <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="subject-delete" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                  </svg>
+              </div>
+            </div>
+          `;
+        
+          subjectItem.innerHTML = template;
+          subjectList.appendChild(subjectItem);
+        }
+
+        // Get the section form element
+        const subjectForm = document.getElementById('subject-form');
+
+        // Add an event listener to the form submission
+        subjectForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+        
+          const classSelect = document.getElementById('select-class');
+          const className = classSelect.value.trim();
+          const sectionInput = document.getElementById('select-section');
+          const sectionName = sectionInput.value.trim();
+          const subjectInput = document.getElementById('subject-name');
+          const subjectName = subjectInput.value.trim();
+        
+          if (subjectName) {
+            addSection(sectionName, className, subjectName);
+            sectionInput.value = '';
+            classSelect.value = '';
+            subjectInput.value = '';
+            document.getElementById('id01').style.display = 'none';
+          }
+          else{
+            alert('enter a name for subject');
+          }
+        });
+
+        // Add an event listener to the section list
+        document.getElementById('subject-list').addEventListener('click', (event) => {
+          if (event.target.classList.contains('subject-delete')) {
+            const subjectItem = event.target.closest('.created-subject');
+            subjectItem.remove();
+          }
+        });
+        </script>
+    </body>
+</html>

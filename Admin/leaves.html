@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Admin Panel</title>
+        <link rel="stylesheet" href="Adminpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="admin-info">
+                    <div class="admin-name">
+                        <h1>Admin Name</h1>
+                    </div>
+                    <div class="admin-email">
+                        <h2>Admin Email</h2>
+                    </div>
+                    <div class="admin-ID">
+                        <h2>Admin ID</h2>
+                    </div>
+                    <div class="admin-phone">
+                        <h3>Admin Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav id="nav">
+                        <a href="classes.html">Classes</a>
+                        <a href="section.html">Sections</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="exams.html">Exams</a>
+                        <a href="departments.html">Departments</a>
+                        <a href="academicsession.html">Academic Session</a>
+                        <a href="employeecategories.html">Employee Categories</a>
+                        <a href="leaves.html" class="active" id="leaves-link">Leave Types</a>
+                        <a href="studentpayment.html">Student Payment Types</a>
+                        <a href="feecollection.html">Fee Collection</a>
+                        <a href="">Sms Integration</a>
+                        <a href="managebus.html">Manages Buses</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="timetable.html">Time Table Module</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Admin Portal - Employee Leaves</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="admin-leaves">
+                        <div class="created-leaves-container" id="leaves-list">
+                            <div class="leaves-tabs-container">
+                                <button type="button" class="leaves-tab" onclick="show(event,'pendingLeaves')" id="defaultTab">Pending Leaves</button>
+                                <button type="button" class="leaves-tab" onclick="show(event,'approvedLeaves')">Approved Leaves</button>
+                            </div>
+                            <div id="pendingLeaves" class="leavesContent">
+                                <h1>Pending Leaves</h1>
+                                <div class="pending-leaves-list">
+                                    <div class="created-pending-leaves">
+                                        <div class="pending-leave-information">
+                                            <h2>Name</h2><hr><h5>Employee Type</h5><hr><h5>Leave Type</h5><hr><h5>Time Frame</h5>
+                                        </div>
+                                        <div class="leave-functions">
+                                            <div class="leave-approve">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="coral" stroke-width="4" stroke-linecap="square" stroke-linejoin="bevel">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                            </div>
+                                            <div class="leave-decline">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="coral" stroke-width="4" stroke-linecap="square" stroke-linejoin="bevel">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="approvedLeaves" class="leavesContent">
+                                <h1>Approved Leaves</h1>
+                                <div class="approved-leave-list">
+                                    <div class="created-approved-leaves">
+                                        <div class="approved-leave-information">
+                                            <h2>Name</h2><hr><h5>Employee Type</h5><hr><h5>Leave Type</h5><hr><h5>Time Frame</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This JavaScript is for scrolling to the active link in the side navigation bar-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const activeLink = document.querySelector("a.active");
+                if (activeLink) {
+                    const linkId = activeLink.id;
+                    const linkElement = document.getElementById(linkId);
+                    linkElement.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        </script>
+        <!--THis is for the ScrollBar in the NavBar-->
+        <script>
+        const nav = document.querySelector('nav');
+
+        nav.addEventListener('scroll', () => {
+            nav.classList.add('scrolling');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            nav.classList.remove('scrolling');
+        });
+
+        nav.addEventListener('mouseover', () => {
+            nav.classList.add('scrolling');
+        });
+        </script>
+        <!--This is for switching between the Tabs-->
+        <script>
+            function show(event, leaveType) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("leavesContent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("leaves-tab");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(leaveType).style.display = "block";
+              event.currentTarget.className += " active";
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultTab").click();
+            </script>
+    </body>
+</html>

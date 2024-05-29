@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Non-Teacher Panel</title>
+        <link rel="stylesheet" href="Nteachering.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="non-teacher-info">
+                    <div class="non-teacher-name">
+                        <h1>Non-Teacher Name</h1>
+                    </div>
+                    <div class="non-teacher-email">
+                        <h2>Non-Teacher Email</h2>
+                    </div>
+                    <div class="non-teacher-ID">
+                        <h2>Non-Teacher ID</h2>
+                    </div>
+                    <div class="non-teacher-phone">
+                        <h3>Non-Teacher Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="shifts.html">Shifts</a>
+                        <a href="attendance.html" class="active">Attendance</a>
+                        <a href="leaves.html">Leaves</a>
+                        <a href="salary.html">Salary</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Non-Teacher Portal - Attendance</h1>  
+                </div>
+                <div class="main-content">
+                    <div class="non-teacher-attendance">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Total Days</th>
+                                    <th>Days Absent</th>
+                                    <th>Attendance (%)</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                              <td>June</td>
+                              <td>22</td>
+                              <td>2</td>
+                              <td>{{ (22-2)/22 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>July</td>
+                              <td>24</td>
+                              <td>1</td>
+                              <td>{{ (24-1)/24 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>August</td>
+                              <td>20</td>
+                              <td>3</td>
+                              <td>{{ (20-3)/20 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>September</td>
+                              <td>23</td>
+                              <td>2</td>
+                              <td>{{ (23-2)/23 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>October</td>
+                              <td>22</td>
+                              <td>1</td>
+                              <td>{{ (22-1)/22 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>November</td>
+                              <td>20</td>
+                              <td>2</td>
+                              <td>{{ (20-2)/20 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>December</td>
+                              <td>23</td>
+                              <td>3</td>
+                              <td>{{ (23-3)/23 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>January</td>
+                              <td>20</td>
+                              <td>1</td>
+                              <td>{{ (20-1)/20 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>February</td>
+                              <td>22</td>
+                              <td>2</td>
+                              <td>{{ (22-2)/22 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>March</td>
+                              <td>23</td>
+                              <td>1</td>
+                              <td>{{ (23-1)/23 * 100 | number:2 }}%</td>
+                            </tr>
+                            <tr>
+                              <td>April</td>
+                              <td>20</td>
+                              <td>0</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>May</td>
+                              <td>22</td>
+                              <td>22</td>
+                              <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Java Script-->
+        <script>
+        // Select only the rows that contain timetable data
+        const tableRows = document.querySelectorAll('.non-teacher-time-table table tr');
+
+        tableRows.forEach((row) => {
+          const cells = row.cells;
+          for (let i = 1; i < cells.length; i++) {
+            const cell = cells[i];
+            if (!cell.textContent) {
+              cell.textContent = '---';
+            }
+          }
+        });
+
+        <!--Java Script to calculate the attendance-->
+        var rows = document.querySelectorAll('table tr');
+
+            // Loop through each row
+            rows.forEach(function(row, index) {
+              // Skip the header row
+              if (index === 0) return;
+            
+              // Get the cells in the row
+              var cells = row.cells;
+            
+              // Get the total days and days absent values
+              var totalDays = parseInt(cells[1].textContent);
+              var daysAbsent = parseInt(cells[2].textContent);
+            
+              // Calculate the attendance percentage
+              var attendancePercentage = ((totalDays - daysAbsent) / totalDays) * 100;
+            
+              // Format the percentage to 2 decimal places
+              attendancePercentage = attendancePercentage.toFixed(2);
+            
+              // Update the attendance percentage cell
+              cells[3].textContent = attendancePercentage + '%';
+            });
+       
+        </script>
+    </body>
+</html>

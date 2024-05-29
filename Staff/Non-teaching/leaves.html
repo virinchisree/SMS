@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Parent Panel</title>
+        <link rel="stylesheet" href="Nteachering.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="non-teacher-info">
+                    <div class="non-teacher-name">
+                        <h1>Non-Teacher Name</h1>
+                    </div>
+                    <div class="non-teacher-email">
+                        <h2>Non-Teacher Email</h2>
+                    </div>
+                    <div class="non-teacher-ID">
+                        <h2>Non-Teacher ID</h2>
+                    </div>
+                    <div class="non-teacher-phone">
+                        <h3>Non-Teacher Phone</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="shifts.html">Shifts</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="leaves.html" class="active">Leaves</a>
+                        <a href="salary.html">Salary</a>
+                        <a href="">Log Out</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                  <div class="school-name">
+                    <h2>School Name</h2>
+                  </div>
+                  <div class="school-trademark">
+                    <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Non-Teacher Portal - Leaves</h1>  
+                </div>
+                <div class="main-content">
+                    <!--Type from here onwards-->
+                    <div class="leaves-container">
+                        <div class="non-teacher-leaves-table">
+                            <h2>Leave Balance</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>No. Leaves Available</th>
+                                        <th>No. Leaves Taken</th>
+                                        <th>No. Leaves Remaining</th>
+                                        <th>Leave-Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>January</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>February</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>March</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>April</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>May</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>June</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>August</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>September</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>October</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>November</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>December</td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="leaves-form">
+                            <h2>Apply for Leave</h2>
+                            <form>
+                              <label for="leave-type">Leave Type:</label>
+                              <select id="leave-type">
+                                <option value="hidden"></option>
+                                <option value="annual">Annual Leave</option>
+                                <option value="sick">Sick Leave</option>
+                                <option value="maternity">Maternity Leave</option>
+                                <option value="Paternity">Paternity Leave</option>
+                              </select>
+                              <br>
+                              <label for="start-date">Start Date:</label>
+                              <input type="date" id="start-date">
+                              <br>
+                              <label for="end-date">End Date:</label>
+                              <input type="date" id="end-date">
+                              <br>
+                              <label for="reason">Reason:</label>
+                              <textarea id="reason"></textarea>
+                              <br>
+                              <button type="submit"  onclick="calculateLeaves()">Apply for Leave</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Java Script for calculating the leaves-->
+        <script>
+        function calculateLeaves() {
+            const startDate = document.getElementById("start-date").value;
+            const endDate = document.getElementById("end-date").value;
+            const leaveType = document.getElementById("leave-type").value;
+            const reason = document.getElementById("reason").value;
+        
+            const startDateParts = startDate.split("-");
+            const endDateParts = endDate.split("-");
+            const startDateDate = new Date(startDateParts[0], startDateParts[1] - 1, startDateParts[2]);
+            const endDateDate = new Date(endDateParts[0], endDateParts[1] - 1, endDateParts[2]);
+        
+            const differenceInDays = (endDateDate - startDateDate) / (1000 * 3600 * 24) + 1;
+        
+            const tableRows = document.querySelectorAll("tr");
+            const targetRow = Array.from(tableRows).find(row => {
+                const monthCell = row.cells[0];
+                return monthCell.textContent.trim() === startDateParts[1];
+            });
+        
+            if (targetRow) {
+                const leavesTakenCell = targetRow.cells[2];
+                const leavesRemainingCell = targetRow.cells[3];
+                const leaveTypeCell = targetRow.cells[4];
+            
+                leavesTakenCell.textContent = differenceInDays;
+                leavesRemainingCell.textContent = parseInt(targetRow.cells[1].textContent) - differenceInDays;
+                leaveTypeCell.textContent = leaveType;
+            } else {
+                console.error("Could not find target row.");
+            }
+        }
+        </script>
+        <!--This is for setting the current date-->
+        <script>
+            document.getElementById("start-date").value = new Date().toISOString().substring(0, 10)
+            document.getElementById("end-date").value = new Date().toISOString().substring(0, 10)
+        </script>
+    </body>
+</html>

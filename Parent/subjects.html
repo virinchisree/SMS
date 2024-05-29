@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Parent Panel</title>
+        <link rel="stylesheet" href="Parentpanel.css">
+    </head>
+    <body style="display: contents;">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="student-info">
+                    <div class="parent-name">
+                        <h1>Parent name</h1>
+                    </div>
+                    <div class="student-name">
+                        <h2>Student name</h2>
+                    </div>
+                    <div class="student-ID">
+                        <h2>Student ID</h2>
+                    </div>
+                    <div class="student-class">
+                        <h3>Student class</h3>
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <nav>
+                        <a href="classes.html">Classes</a>
+                        <a href="subjects.html" class="active">Subjects</a>
+                        <a href="timetable.html">Time Table</a>
+                        <a href="exams.html">Exams</a>
+                        <a href="marks.html">Marks</a>
+                        <a href="attendance.html">Attendance</a>
+                        <a href="fees.html">Fees</a>
+                        <a href="businfo.html">Bus Info</a>
+                    </nav>
+                </div>
+                <div class="bottom-block">
+                    <div class="school-name">
+                      <h2>School Name</h2>
+                    </div>
+                    <div class="school-trademark">
+                        <p>Copyright <span><strong>&copy;</strong></span> 2024 LTW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="classes-top-bar">
+                    <h1>Parent Portal - Subjects</h1>  
+                </div>
+                <div class="main-content">
+                    <h1>Subjects</h1>
+                    <!--Type from here onwards-->
+                    <div class="parent-subjects">
+                        <div class="img-avatar">
+                            <img src="images/avatar.jpg" alt="Student-photo" width="250px">
+                            <h2>student photo</h2>
+                        </div>
+                        <div class="subjects">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Languages</th>
+                                        <th>Subjects</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Teugu</td>
+                                        <td>Maths</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hindi</td>
+                                        <td>Physics</td>
+                                    </tr>
+                                    <tr>
+                                        <td>English</td>
+                                        <td>Biology</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sanskrit</td>
+                                        <td>Social</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This is for scrolling in the nav-->
+        <script>
+            const nav = document.querySelector('nav');
+
+            nav.addEventListener('scroll', () => {
+                nav.classList.add('scrolling');
+            });
+
+            nav.addEventListener('mouseleave', () => {
+                nav.classList.remove('scrolling');
+            });
+
+            nav.addEventListener('mouseover', () => {
+                nav.classList.add('scrolling');
+            });
+        </script>
+    </body>
+</html>

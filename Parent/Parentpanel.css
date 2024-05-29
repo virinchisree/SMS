@@ -1,0 +1,589 @@
+/*
+The colors used in this are
+#E0FCFF
+#BDE4F4
+#404969
+coral
+*/
+
+.main-container{
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.left-container{
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+}
+
+.student-info{
+    background-color: coral;
+    height: 100%;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.student-name, .student-email, .parent-name{
+    margin-left: 10px;
+    text-align: left;
+}
+
+.student-ID, .student-class{
+    text-align: right;
+    margin-right: 10px;
+}
+
+.nav-sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #404969;
+    height: 400px;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid black;
+}
+
+nav {
+    width: 100%;
+    height: 100% fixed;
+    overflow-y: auto;
+
+    &:not(.scrolling)::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    &.scrolling::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: coral;
+        border-radius: 10px;
+        border: 1.5px solid #404969;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #40496900;
+    }
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    width: 100% fixed;
+    margin-top: 1px;
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 70px;
+    padding-left: 10px;
+    align-items: center;
+}
+
+a.active {
+    margin-left: 20px;    
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.bottom-block{
+    z-index: 3;
+    background-color: coral;
+    width: 100%;    
+    height: 99.5px;
+    padding-bottom: 9px;
+    border: 1px solid black;
+    .school-name{
+        margin-left: 10px;
+    }
+
+    .school-trademark{
+        text-align: right;
+        margin-right: 10px;
+    }
+}
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    .classes-top-bar{
+        border: 1px solid black;
+        text-align: center;
+        background-color: #404969;
+        color: whitesmoke;
+    }
+}
+
+.main-content{
+    height: 647px;
+    overflow-y: auto;
+    h1{
+        text-align: center;
+    }
+}
+
+/*This is for the Classes for parent portal*/
+.parent-classes{
+    margin-left: 10px;
+    margin-right: 10px;
+
+    .collapsible {
+        background-color: #E0FCFF;
+        color: #333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: 1px solid black;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+        background-color: #BDE4F4;
+    }
+    
+    .class-content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+    
+    table 
+    {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+    }
+      
+    th,td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: left;
+    }
+      
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+      
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}
+
+/*This is for the parent portal*/
+.parent-subjects{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .img-avatar{
+        width: 100%;
+        text-align: center;
+    }
+
+    .subjects{
+        width: 100%;
+    }
+    
+    table 
+    {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+    }
+    
+    th,td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}
+
+/*This is for the parent time-table*/
+
+.parent-time-table{
+    margin-top: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    table 
+    {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+    }
+      
+    th,td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: left;
+    }
+      
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+      
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}
+
+/*This is for the student tabs*/
+
+.parent-exams{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    h2{
+        text-align: center;
+    }
+
+    .exam-tabs {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #404969;
+        background-color: #E0FCFF;
+        align-items: center;
+        border-radius: 10px;
+        height: 30px;
+        padding: 1px 2px 1px 2px;
+    }
+
+
+    .exam-tab-button {
+        display: inline-flex;
+      background-color: initial;
+      float: left;
+      border: none;
+      height: 25px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      width: 25%;
+      border-radius: 7px;
+      margin-top: 1px;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-bottom: 1px;
+      color: black;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .exam-tab-button:hover {
+        background-color: #BDE4F4;
+    }
+      
+    .exam-tab-button.active{
+          background-color: coral;
+    }
+
+    .unit-test-time-table, .quarterly-time-table, .half-yearly-time-table, .annually-time-table{
+        h3{
+            text-align: center;
+        }
+        table 
+        {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+          
+        th,td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+          
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+          
+        tr:nth-child(even) {
+            background-color: #E0FCFF;
+        }
+    }
+    
+}
+
+/*This for the Parent marks page*/
+.parent-marks{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    h2{
+        text-align: center;
+    }
+
+    .exam-tabs {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #404969;
+        background-color: #E0FCFF;
+        align-items: center;
+        border-radius: 10px;
+        height: 30px;
+        padding: 1px 2px 1px 2px;
+    }
+
+
+    .exam-tab-button {
+        display: inline-flex;
+      background-color: initial;
+      float: left;
+      border: none;
+      height: 25px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      width: 25%;
+      border-radius: 7px;
+      margin-top: 1px;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-bottom: 1px;
+      color: black;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .exam-tab-button:hover {
+        background-color: #BDE4F4;
+    }
+      
+    .exam-tab-button.active{
+          background-color: coral;
+    }
+
+    .unit-test-marks, .quarterly-marks, .half-yearly-marks, .annually-marks {
+        h3{
+            text-align: center;
+        }
+        table 
+        {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+          
+        th,td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+          
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+          
+        tr:nth-child(even) {
+            background-color: #E0FCFF;
+        }
+    }
+    
+}
+
+/*This is for Attendance Tab*/
+
+.attendance-table{
+    margin-top: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    table 
+    {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+    }
+      
+    th,td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: left;
+    }
+      
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+      
+    tr:nth-child(even) {
+        background-color: #E0FCFF;
+    }
+}
+
+/*This is for the Fee page*/
+.parent-fees{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    h2{
+        text-align: center;
+    }
+
+    .collapsible {
+        background-color: #E0FCFF;
+        color: #333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: 1px solid black;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+    
+    .collapsible:hover {
+        background-color: #BDE4F4;
+        color: #333;
+    }
+
+    .active{
+        background-color: #404969;
+        color: whitesmoke;
+    }
+    
+    .fee-content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    table 
+    {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+    }
+      
+    th,td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: left;
+    }
+      
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+      
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+}
+
+/*This is for the bus-info page*/
+
+.bus-route{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+    .bus-tabs {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #404969;
+        background-color: #E0FCFF;
+        align-items: center;
+        border-radius: 10px;
+        height: 30px;
+        padding: 1px 2px 1px 2px;
+    }
+
+
+    .exam-tab-button {
+        display: inline-flex;
+      background-color: initial;
+      float: left;
+      border: none;
+      height: 25px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      width: 50%;
+      border-radius: 7px;
+      margin-top: 1px;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-bottom: 1px;
+      color: black;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .exam-tab-button:hover {
+        background-color: #BDE4F4;
+    }
+      
+    .exam-tab-button.active{
+          background-color: coral;
+    }
+
+    table 
+    {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+    }
+      
+    th,td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: left;
+    }
+      
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+      
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}
